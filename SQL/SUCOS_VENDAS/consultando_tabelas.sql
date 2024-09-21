@@ -1,0 +1,76 @@
+SELECT DISTINCT [SABOR] FROM SUCOS_VENDAS.dbo.produtos --> SABORES DA EMPRESA
+SELECT DISTINCT [TAMANHO] FROM SUCOS_VENDAS.dbo.produtos --> TAMANHOS DISPONIVEIS
+
+SELECT * FROM SUCOS_VENDAS.dbo.produtos
+SELECT * FROM SUCOS_VENDAS.dbo.clientes
+
+
+-----------------------
+/* Consulta PRODUTOS */
+SELECT	[COD_PRODUTO] AS [CÓDIGO DO PRODUTO],
+		[NOME_PRODUTO] AS [NOME DO PRODUTO], 
+		[EMBALAGEM], 
+		[TAMANHO], 
+		[SABOR], 
+		[PRECO_LISTA] AS [PREÇO DO PRODUTO]
+FROM	SUCOS_VENDAS.dbo.produtos WITH(NOLOCK) 
+WHERE	[PRECO_LISTA] <= 7.00				/* in like > = < <> */
+AND		[EMBALAGEM] in ( 'Lata',
+						 'Garrafa' )
+ORDER BY [PRECO_LISTA]
+
+SELECT	[NOME_PRODUTO] AS [PRODUTO], 
+		[EMBALAGEM],
+		[PRECO_LISTA] AS [PREÇO DO PRODUTO]
+FROM	SUCOS_VENDAS.dbo.produtos
+WHERE	[EMBALAGEM] = 'Lata' AND [PRECO_LISTA] < 6
+
+
+-----------------------
+/* Consulta CLIENTES */
+SELECT	[NOME] AS [NOME DO CLIENTE], 
+		[CPF],
+		[NASCIMENTO],
+		[SEXO],
+		[ESTADO] AS [UF],
+		[PRIMEIRA_COMPRA]
+FROM	SUCOS_VENDAS.dbo.clientes WITH(NOLOCK)
+WHERE	[PRIMEIRA_COMPRA] = 1
+AND		YEAR([NASCIMENTO]) > '1990' 
+ORDER BY [NOME]
+
+SELECT	[NOME], 
+		[BAIRRO]
+FROM	SUCOS_VENDAS.dbo.clientes WITH(NOLOCK)
+WHERE	NOT([BAIRRO] = 'Copacabana' OR [BAIRRO] = 'Tijuca')
+
+SELECT	[NOME], 
+		[ESTADO],
+		[PRIMEIRA_COMPRA]
+FROM	SUCOS_VENDAS.dbo.clientes WITH(NOLOCK)
+WHERE	[PRIMEIRA_COMPRA] = 1 AND [ESTADO] = 'SP'
+
+
+-------------------------
+/* Consulta VENDEDORES */
+SELECT	[MATRICULA] AS [IDENTIFICADOR],
+		[NOME] AS [NOME DO VENDEDOR],
+		[CPF],
+		[PORCEN_COMISSAO] AS [PORCENTAGEM DA COMISSÃO]
+FROM	SUCOS_VENDAS.dbo.vendedores
+WHERE	[PORCEN_COMISSAO] <= 0.08
+ORDER BY [NOME]
+
+
+-----------------------------------
+/* Realizando update nas tabelas */
+UPDATE [produtos]
+SET [PRECO_LISTA] = 4.20
+--SELECT * FROM [produtos]
+WHERE [COD_PRODUTO] = '1040107'
+
+
+-------------------------------
+/* Deletando dados da tabela */
+DELETE FROM [produtos]
+WHERE COD_PRODUTO = '290478'

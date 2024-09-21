@@ -1,0 +1,102 @@
+
+CREATE TABLE PRODUTOS -- Criando tabela de produto
+( 
+	-- Colunas
+	CODIGO VARCHAR(10) NOT NULL,
+	DESCRITOR VARCHAR(100) NULL,
+	SABOR VARCHAR(50) NULL,
+	TAMANHO VARCHAR(50) NULL,
+	EMBALAGEM VARCHAR(50) NULL,
+	PRECO_LISTA FLOAT NULL,
+
+	-- Chave primária
+	PRIMARY KEY (CODIGO) 
+)
+
+
+CREATE TABLE VENDEDORES -- Criando tabela de vendedores
+(
+	-- Colunas
+	MATRICULA VARCHAR(5) NOT NULL,
+	NOME VARCHAR(100) NULL,
+	BAIRRO VARCHAR(50) NULL,
+	COMISSAO FLOAT NULL,
+	DATA_ADMISSAO DATE NULL,
+	FERIAS BIT NULL,
+
+	-- Chave primária
+	PRIMARY KEY (MATRICULA)
+)
+
+
+CREATE TABLE CLIENTES -- Criando tabela de clientes
+(
+	-- Colunas
+	CPF VARCHAR(11) NOT NULL,
+	NOME VARCHAR(100) NULL,
+	ENDERECO VARCHAR(150) NULL,
+	BAIRRO VARCHAR(50) NULL,
+	CIDADE VARCHAR(50) NULL,
+	ESTADO VARCHAR(50) NULL,
+	CEP VARCHAR(8) NULL,
+	DATA_NASCIMENTO DATE NULL,
+	IDADE INT NULL,
+	GENERO VARCHAR(1) NULL,
+	LIMITE_CREDITO FLOAT NULL,
+	VOLUME_COMPRA FLOAT NULL,
+	PRIMEIRA_COMPRA BIT NULL,
+
+	-- Chave primária
+	PRIMARY KEY (CPF)
+)
+
+
+CREATE TABLE VENDAS -- Criando tabela de vendas
+(
+	-- Colunas
+	NUMERO VARCHAR(5) NOT NULL,
+	DATA_VENDAS DATE NULL,
+	CPF VARCHAR(11) NOT NULL,
+	MATRICULA VARCHAR(11) NOT NULL,
+	IMPOSTO FLOAT NULL,
+
+	-- Chave primária
+	PRIMARY KEY (NUMERO)
+)
+
+
+CREATE TABLE ITENS_VENDIDOS
+(
+	-- Colunas
+	NUMERO VARCHAR(5) NOT NULL,
+	CODIGO VARCHAR(10) NOT NULL,
+	QUANTIDADE INT NULL,
+	PRECO FLOAT NULL,
+
+	-- Chave primária
+	PRIMARY KEY (NUMERO, CODIGO),
+)
+
+
+ALTER TABLE VENDAS -- Alterando tabela de vendas
+ADD CONSTRAINT FK_CLIENTES -- Adiciona a Chave estrangeira (aonde se relaciona com outra tabela)
+FOREIGN KEY (CPF) REFERENCES CLIENTES (CPF) -- Relacionando CPF de vendas com CPF de clientes
+
+
+ALTER TABLE VENDAS -- Alterando tabela de vendas
+ADD CONSTRAINT FK_VENDEDORES -- Adiciona a  Chave estrangeira (aonde se relaciona com outra tabela)
+FOREIGN KEY (MATRICULA) REFERENCES VENDEDORES (MATRICULA) -- Relacionando MATRICULA de vendas com MATRICULA de vendedores
+
+
+ALTER TABLE VENDAS -- Alterando tabela de vendas
+ALTER COLUMN MATRICULA VARCHAR(5) NOT NULL -- Alterar a coluna matricula
+
+
+ALTER TABLE ITENS_VENDIDOS -- Alterando tabela de vendas
+ADD CONSTRAINT FK_VENDAS  -- Adiciona a  Chave estrangeira (aonde se relaciona com outra tabela)
+FOREIGN KEY (NUMERO) REFERENCES VENDAS (NUMERO) -- Relacionando NUMERO de itens_vendidos com NUMERO de vendas 
+
+
+ALTER TABLE ITENS_VENDIDOS -- Alterando tabela de vendas
+ADD CONSTRAINT FK_PRODUTOS -- Adiciona a  Chave estrangeira (aonde se relaciona com outra tabela)
+FOREIGN KEY (CODIGO) REFERENCES PRODUTOS (CODIGO)
