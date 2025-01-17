@@ -2,8 +2,8 @@
 
 echo "Bem vindo(as) ao screen match!\n\n";
 
-$nomeFilme = "Sonic";
-$anoLancamento = $argv[1] ?? 2022;
+$nomeFilme = "Sonic"; // Atribuindo o nome do filme
+$anoLancamento = $argv[1] ?? 2022; // Estamos acessando o primeiro argumento passado para o script (excluindo o nome do script). Se o usuário não passar nenhum argumento, $argv[1] será null.
 
 $somaDeNotas = (9 + 5 + 7);
 $notaFilme =  $somaDeNotas / 3;
