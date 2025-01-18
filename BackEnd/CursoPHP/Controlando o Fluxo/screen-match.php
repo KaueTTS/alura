@@ -6,11 +6,40 @@ echo "Bem vindo(as) ao screen match!\n\n"; // Mostrando a primeira mensagem no t
 $nomeFilme = "Sonic";
 
 
-$anoLancamento = $argv[1] ?? 2023; // Estamos acessando o primeiro argumento passado no terminal (excluindo o nome do script). Se o usuário não passar nenhum argumento, $argv[1] será 2022 (valor passado como padrão).
+// $anoLancamento = $argv[1] ?? 2025; // Estamos acessando o primeiro argumento passado no terminal (excluindo o nome do script). Se o usuário não passar nenhum argumento, $argv[1] será 2022 (valor passado como padrão).
+$anoLancamento = 2025;
 
 
-$somaDeNotas = (9 + 5 + 7);
-$notaFilme =  $somaDeNotas / 3;
+$quantidadeDeNotas = $argc - 1; // Puxa os dois valores passado no terminal - 1 (subtrai 1 pq é o nome do arquivo)
+$somaDeNotas = 0;
+
+
+$contador = 1;
+/*
+Inicialização: A variável $i é inicializada com o valor 1. Isso significa que o loop começará a acessar os parâmetros a partir do segundo elemento, já que o primeiro elemento ($argv[0]) é o nome do script.
+
+Condição de Repetição: O loop continuará enquanto $i for menor que $argc, que representa o número total de argumentos passados. Isso garante que o loop não acesse índices que não existem no array $argv.
+
+Incremento: Após cada iteração, $i é incrementado em 1 ($i++), permitindo que o loop avance para o próximo parâmetro.
+*/
+for ($contador; $contador < $argc; $contador++) { 
+    $somaDeNotas += $argv[$contador];
+}
+
+
+/*
+O loop começa com $contador igual a 1.
+Enquanto o valor em $argv[$contador] não for 0, o loop continua.
+A cada iteração, o valor atual de $argv[$contador] é somado a $somaDeNotas.
+O contador é incrementado, passando para o próximo argumento.
+Quando um 0 é encontrado, o loop para, e a soma total das notas é armazenada em $somaDeNotas.
+*/
+// while ($argv[$contador] != 0) {
+//     $somaDeNotas += $argv[$contador++];
+// }
+
+
+$notaFilme =  $somaDeNotas / $quantidadeDeNotas;
 $planoPrime = false;
 $primeStatus = $planoPrime ? "{ Plano ativado }" : "{ Plano desativado }"; // operador ternário (se $planoPrime for true retorna ativo)
 

@@ -41,10 +41,45 @@ Exploramos como controlar o fluxo em PHP utilizando expressões condicionais.
 <br>
 
 # [ Aula 3 ]
+## Resumo da Aula: Avaliando o filme
+
+Aprendemos sobre como controlar o fluxo de uma aplicação em PHP utilizando a estrutura de repetição `for`. O instrutor explica como usar as variáveis `argc` e `argv` para trabalhar com parâmetros passados na linha de comando.
+
+- **`argc`**: Indica o número de parâmetros.
+- **`argv`**: Contém os valores desses parâmetros.
+
+O instrutor demonstra como calcular a média de notas de um filme, somando as notas passadas como parâmetros e dividindo pela quantidade de notas.
+
+### Estrutura `for`
+
+A estrutura `for` é detalhada, mostrando suas três partes:
+1. **Inicialização**
+2. **Condição de repetição**
+3. **Incremento**
+
+O instrutor também menciona a possibilidade de simplificar o incremento usando o operador `++`. 
+
+Ao final, é ressaltado que o `for` é uma das estruturas de repetição mais utilizadas no dia a dia da programação, mas que existem outras opções que serão abordadas em vídeos futuros.
 
 <br>
 
 # [ Aula 4 ]
+## Resumo da Aula: Outros Loops
+
+### Estruturas de Repetição
+
+- **For Loop**: Utilizado quando sabemos o número exato de repetições. Exemplo: somar notas recebidas pela linha de comando.
+
+- **While Loop**: Usado quando não sabemos quantas vezes vamos repetir uma ação, mas temos uma condição para parar. Exemplo: somar notas até encontrar uma nota zero.
+
+### Exemplo de While
+
+```php
+$contador = 1;
+while ($argv[$contador] != 0) {
+    $somaDeNotas += $argv[$contador++];
+}
+```
 
 <br>
 
