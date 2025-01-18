@@ -1,5 +1,6 @@
 git init <!-- Cria um repositório vazio -->
 git status <!-- Verifar status do repositório -->
+git checkout -b nome_da_branch <!-- Cria uma nova branch -->
 <!-- Primeiros passos principais -->
 git remote add origin (LINK) <!-- Associa o endereço do repositório da nuvem no computador -->
 git pull origin master <!-- Atualiza o seu repositório no computado -->
