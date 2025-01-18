@@ -5,6 +5,7 @@ git branch -d nome-da-branch <!-- Deleta a branch local, mas apenas se ela já t
 git push origin --delete nome-da-branch <!-- Deleta a branch remota (nuvem) -->
 git branch <!-- Verifica a branch atual -->
 git branch -r <!-- Lista as branchs remotas -->
+
 <!-- Primeiros passos -->
 git remote add origin (LINK) <!-- Associa o endereço do repositório da nuvem no computador -->
 git pull origin master <!-- Atualiza o seu repositório no computado -->
