@@ -36,7 +36,11 @@ Quando um 0 é encontrado, o loop para, e a soma total das notas é armazenada e
 */
 // while ($argv[$contador] != 0) {
 //     $somaDeNotas += $argv[$contador++];
-// }
+// }´
+//
+// do {
+//  alguma ação
+// } while (condição);
 
 
 $notaFilme =  $somaDeNotas / $quantidadeDeNotas;

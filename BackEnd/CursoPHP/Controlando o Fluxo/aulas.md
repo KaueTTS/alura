@@ -80,7 +80,3 @@ while ($argv[$contador] != 0) {
     $somaDeNotas += $argv[$contador++];
 }
 ```
-
-<br>
-
-# [ Aula 5 ]
