@@ -22,7 +22,6 @@ s: segundos com dois dígitos (ex: 00 a 59)
 A: AM ou PM
 l: nome do dia (segunda, terça, etc)
 w: número do dia (1 = Domingo, 2 = Segunda, etc)
-
 */
 
 // Switch com os nomes dos dias da semana em português

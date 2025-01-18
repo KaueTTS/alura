@@ -80,3 +80,14 @@ while ($argv[$contador] != 0) {
     $somaDeNotas += $argv[$contador++];
 }
 ```
+<br>
+
+# O QUE APRENDEMOS?
+
+- Aprendemos a controlar o fluxo de nossa aplicação, tomando decisões baseadas em valores que podemos analisar. Utilizamos if/elseif/else para isso.
+
+- Conhecemos uma forma de ter uma expressão condicional através de match expressions que podem “retornar” valores diferentes dependendo da condição.
+
+- Conseguimos repetir determinadas ações sem repetir o código, através de estruturas de repetição, os famosos loops.
+
+- Entendemos como e quando usar diferentes tipos de loops como for, while e do while.
