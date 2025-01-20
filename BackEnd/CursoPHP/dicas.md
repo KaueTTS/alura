@@ -67,3 +67,27 @@ Argumento 3: 15
 
 ```
 <br>
+
+# [ var_dump() ]
+```
+Serve para mostrar a lista do array
+
+Exemplo:
+
+php nome-do-arquivo 10 9 8 7 6
+
+array(6) {
+  [0]=>
+  string(18) ".\screen-match.php"
+  [1]=>
+  string(2) "10"
+  [2]=>
+  string(1) "9"
+  [3]=>
+  string(1) "8"
+  [4]=>
+  string(1) "7"
+  [5]=>
+  string(1) "6"
+}
+``` 

@@ -75,4 +75,11 @@ $genero = match ($nomeFilme) {
 echo "-\t O gênero do filme é: $genero";
 
 
-var_dump($argv);
+$notaParaOFilme = [
+    10,
+    9,
+    8.5,
+    0
+];
+
+var_dump($notaParaOFilme);

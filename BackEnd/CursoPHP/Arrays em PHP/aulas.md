@@ -23,6 +23,30 @@ echo ``$notasParaOFilme[0];`` // Acessa o primeiro elemento da nota (ou seja, o 
 
 # [ Aula 2 ] 
 ## Resumo da Aula: Nomeando informações
+
+### Introdução aos Arrays
+- O *array* em PHP é uma estrutura poderosa e amplamente utilizada.
+- Dados externos, como formulários da web, geralmente vêm em formato de **dicionário** ou **mapa**.
+
+### Array Associativo
+- Um *array associativo* permite usar strings como chaves em vez de índices numéricos.
+- Exemplo de um array associativo para um filme:
+
+```php
+$filme = [
+    "nome" => "Thor: Ragnarok",
+    "ano" => 2021,
+    "nota" => 7.8,
+    "genero" => "super-herói"
+];
+```
+
+Para acessar um valor, utiliza-se a variável do array e a chave entre colchetes.
+
+Exemplo para acessar o nome do filme:
+
+```echo $filme['nome']; // Exibe "Thor: Ragnarok"```
+
 <br>
 
 # [ Aula 3 ] 
