@@ -51,4 +51,30 @@ Exemplo para acessar o nome do filme:
 
 # [ Aula 3 ] 
 ## Resumo da Aula: Manipulando arrays
+
+### Introdução
+- A aula aborda a manipulação de arrays em PHP, focando na criação e manipulação de um array de notas.
+
+### Criando um Array
+- Inicializamos um array vazio: `$notas = [];`
+- Adicionamos itens ao array dentro de um loop `for`, utilizando a posição correta.
+
+### Alterando o Tipo
+- As notas são inicialmente do tipo string. Utilizamos `(float)` para convertê-las em números.
+
+### Adicionando Itens
+- Itens podem ser adicionados ao final do array usando `$notas[] = (float)$argv[$contador];`.
+
+### Somando Itens do Array
+- Utilizamos um loop `for` para somar as notas, começando o contador em 0 e utilizando `count()` para determinar o tamanho do array.
+
+### Loop `foreach`
+- O loop `foreach` é introduzido como uma maneira mais simples de iterar sobre os elementos do array.
+
+### Função `array_sum`
+- A função `array_sum` é apresentada como uma forma simplificada de somar os elementos de um array.
+
+### Conclusão
+- A aula encerra com a importância dos arrays em PHP e a promessa de desafios práticos na próxima aula.
+
 <br>

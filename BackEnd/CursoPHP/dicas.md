@@ -91,3 +91,27 @@ array(6) {
   string(1) "6"
 }
 ``` 
+<br>
+
+# [ count() ]
+```
+A função count() em PHP é utilizada para contar o número de elementos em um array ou o número de propriedades em um objeto.
+
+Exemplo:
+
+$notas = [7.5, 8.0, 9.0];
+$quantidadeDeNotas = count($notas);
+echo $quantidadeDeNotas; // Saída: 3
+```
+<br>
+
+# [ array_sum() ]
+```
+A função array_sum($notas) é uma função embutida do PHP que calcula a soma de todos os elementos de um array.
+
+Exemplo: 
+
+$notas = [7.5, 8.0, 9.0];
+$somaTotal = array_sum($notas);
+echo $somaTotal; // Saída: 24.5
+```

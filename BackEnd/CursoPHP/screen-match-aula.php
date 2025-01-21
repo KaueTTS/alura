@@ -11,10 +11,9 @@ $anoLancamento = 2025;
 
 
 $quantidadeDeNotas = $argc - 1; // Puxa os dois valores passado no terminal - 1 (subtrai 1 pq é o nome do arquivo)
-$somaDeNotas = 0;
+$notas = [];
 
 
-$contador = 1;
 /*
 Inicialização: A variável $i é inicializada com o valor 1. Isso significa que o loop começará a acessar os parâmetros a partir do segundo elemento, já que o primeiro elemento ($argv[0]) é o nome do script.
 
@@ -22,8 +21,19 @@ Condição de Repetição: O loop continuará enquanto $i for menor que $argc, q
 
 Incremento: Após cada iteração, $i é incrementado em 1 ($i++), permitindo que o loop avance para o próximo parâmetro.
 */
-for ($contador; $contador < $argc; $contador++) { 
-    $somaDeNotas += $argv[$contador];
+$contador = 1;
+for ($contador; $contador < $argc; $contador++) { // argc é o número de argumentos passados no terminal
+    $notas[] = (float) $argv[$contador]; // Adiciona o valor do argumento atual ao array $notas
+}
+
+
+// var_dump($notas);
+
+
+/*
+$somaDeNotas = 0;
+foreach ($notas as $nota) { // Para cada NOTA dentro de NOTAS
+    $somaDeNotas += $nota; // Adiciona o valor da nota atual à variável $somaDeNotas
 }
 
 
@@ -43,7 +53,7 @@ Quando um 0 é encontrado, o loop para, e a soma total das notas é armazenada e
 // } while (condição);
 
 
-$notaFilme =  $somaDeNotas / $quantidadeDeNotas;
+$notaFilme =  array_sum($notas) / $quantidadeDeNotas; // Calcula a média das notas
 $planoPrime = false;
 $primeStatus = $planoPrime ? "{ Plano ativado }" : "{ Plano desativado }"; // operador ternário (se $planoPrime for true retorna ativo)
 
@@ -73,13 +83,3 @@ $genero = match ($nomeFilme) {
 
 
 echo "-\t O gênero do filme é: $genero";
-
-
-$notaParaOFilme = [
-    10,
-    9,
-    8.5,
-    0
-];
-
-var_dump($notaParaOFilme);
