@@ -78,3 +78,13 @@ Exemplo para acessar o nome do filme:
 - A aula encerra com a importância dos arrays em PHP e a promessa de desafios práticos na próxima aula.
 
 <br>
+
+# O QUE APRENDEMOS?
+
+- Conhecemos o array, um dos tipos de dados mais importantes do PHP, sendo útil em determinados cenários e amplamente utilizado;
+
+- Entendemos que arrays podem ser numéricos (em que os índices são números) ou associativos (em que as chaves são strings);
+
+- Aprendemos a manipular arrays, adicionando itens, lendo itens e até executando funções em arrays;
+
+- Conhecemos um tipo de loop específico para manipular itens semelhantes a um array: o foreach.
