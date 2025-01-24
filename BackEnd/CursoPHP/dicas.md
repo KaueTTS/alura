@@ -115,3 +115,18 @@ $notas = [7.5, 8.0, 9.0];
 $somaTotal = array_sum($notas);
 echo $somaTotal; // Saída: 24.5
 ```
+
+<br>
+
+# [ fgets(STDIN) ]
+```
+O *fgets* é uma função em PHP que permite ler uma linha de entrada de um arquivo.
+
+O *STDIN* é uma constante em PHP que representa a entrada padrão do programa, ou seja, o terminal onde o programa está sendo executado. Quando usamos *fgets(STDIN)*, estamos dizendo ao PHP para ler uma linha de entrada diretamente do terminal.
+
+É importante notar que o fgets lê a entrada como uma string, então, se você quiser trabalhar com um número, será necessário converter o tipo da variável.
+
+Exemplo:
+
+$numero = (float) fgets(STDIN);
+```
