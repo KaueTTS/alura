@@ -1,5 +1,16 @@
 <?php
 
+function exibeMensagemLancamento($ano, $plano) {
+    if ($ano > 1920 && $ano <= 2022 || $plano) {
+        echo "-\t Incluído no plano: Sim\n";
+    } elseif ($ano <= 1920 ) {
+        echo "-\t Erro de busca\n"; 
+    } else {
+        echo "-\t Incluído no plano: Não\n";
+    }
+}
+
+
 echo "Bem vindo(as) ao screen match!\n\n"; // Mostrando a primeira mensagem no terminal
 
 
@@ -65,13 +76,7 @@ echo "-\t Nota do filme: $notaFilme\n";
 echo "-\t Ano de lançamento: $anoLancamento\n";
 
 
-if ($anoLancamento > 1920 && $anoLancamento <= 2022 || $planoPrime) {
-    echo "-\t Incluído no plano: Sim\n";
-} elseif ($anoLancamento <= 1920 ) {
-    echo "-\t Erro de busca\n"; 
-} else {
-    echo "-\t Incluído no plano: Não\n";
-}
+exibeMensagemLancamento($anoLancamento, $planoPrime); // Chamando a função exibeMensagemLancamento
 
 
 $genero = match ($nomeFilme) {
