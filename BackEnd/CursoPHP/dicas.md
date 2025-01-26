@@ -115,7 +115,6 @@ $notas = [7.5, 8.0, 9.0];
 $somaTotal = array_sum($notas);
 echo $somaTotal; // Saída: 24.5
 ```
-
 <br>
 
 # [ fgets(STDIN) ]
@@ -130,3 +129,31 @@ Exemplo:
 
 $numero = (float) fgets(STDIN);
 ```
+<br>
+
+# [ int, bool, float, string, array, object ]
+```
+1. int (integer): Esse tipo indica que o parâmetro deve ser um número inteiro. Ou seja, um número sem parte decimal, como 5, 10, -3, etc. Ao especificar *int* antes do parâmetro, você está informando que a função espera receber um valor inteiro naquele parâmetro.
+
+2. bool (boolean): Esse tipo indica que o parâmetro deve ser um valor booleano, ou seja, *true* ou *false*. Ao especificar *bool* antes do parâmetro, você está informando que a função espera receber um valor verdadeiro ou falso naquele parâmetro.
+
+3. float: Esse tipo indica que o parâmetro deve ser um número de ponto flutuante, ou seja, um número com parte decimal, como 3.14, -2.5, etc.
+
+4. string: Esse tipo indica que o parâmetro deve ser uma cadeia de caracteres, como "Olá, mundo!" ou "João".
+
+5. array: Esse tipo indica que o parâmetro deve ser um array, ou seja, uma coleção de valores.
+
+6. object: Esse tipo indica que o parâmetro deve ser um objeto, ou seja, uma instância de uma classe.
+
+Ao especificar esses tipos de dados antes dos parâmetros, você está informando ao PHP o tipo de valor que a função espera receber. Isso ajuda a evitar erros, pois o PHP pode verificar se o valor passado como argumento é do tipo correto. Caso contrário, ele irá gerar um erro.
+
+```
+<br>
+
+# [ void ]
+```
+O *void* é um tipo especial em PHP que indica que a função não retorna nenhum valor.
+
+Quando uma função é declarada com o tipo de retorno *void*, isso significa que ela não tem um valor de retorno. Ou seja, a função é executada apenas por seus efeitos colaterais, como imprimir algo na tela ou modificar algum estado, mas não devolve nenhum valor ao final da sua execução.
+```
+<br>
