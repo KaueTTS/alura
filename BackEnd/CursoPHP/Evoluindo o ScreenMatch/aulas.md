@@ -51,3 +51,8 @@ Ferramentas como IDEs e editores de texto podem fornecer avisos sobre erros de t
 Isso aumenta a confiabilidade e a manutenibilidade do código, pois outros desenvolvedores podem entender melhor o que cada função espera e retorna.
 <br>
 
+# O QUE APRENDEMOS?
+
+- Conhecemos os conceitos de subrotinas e funções, permitindo a separação e reutilização de trechos de nosso código.
+- Aprendemos a criar funções no PHP, incluindo o recebimento de parâmetros e retorno de valores.
+- Entendemos como adicionar tipos aos parâmetros e ao retorno e conhecemos as vantagens de fazer essa escolha.
