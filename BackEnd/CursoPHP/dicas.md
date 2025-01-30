@@ -157,3 +157,29 @@ O *void* é um tipo especial em PHP que indica que a função não retorna nenhu
 Quando uma função é declarada com o tipo de retorno *void*, isso significa que ela não tem um valor de retorno. Ou seja, a função é executada apenas por seus efeitos colaterais, como imprimir algo na tela ou modificar algum estado, mas não devolve nenhum valor ao final da sua execução.
 ```
 <br>
+
+# [ sort() ]
+```
+A função sort() em PHP é utilizada para ordenar os elementos de um array em ordem crescente.
+
+Exemplo:
+
+$notas = [10, 7, 8.5, 5, 9.3];
+sort($notas);
+var_dump($notas);
+
+Após a execução do código acima, o array $notas será ordenado como [5, 7, 8.5, 9.3, 10]
+```
+<br>
+
+# [ min () ]
+```
+A função min() em PHP é utilizada para encontrar o menor valor em um array ou entre uma lista de valores.
+
+Exemplo:
+
+$notas = [10, 7, 8.5, 5, 9.3];
+$menorNota = min($notas);
+echo $menorNota; // Saída: 5
+```
+<br>
