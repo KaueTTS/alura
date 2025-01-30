@@ -43,7 +43,7 @@ Neste vídeo, aprendemos sobre a importância de organizar nosso código em arqu
 
 1. **Criação da Pasta "screen-match"**:
    - Criamos uma nova pasta chamada "screen-match" e movemos o arquivo `screen-match.php` para dentro dela.
-
+****
 2. **Navegação entre Pastas**:
    - Aprendemos a navegar entre pastas usando o comando `cd` no terminal.
 
@@ -57,5 +57,4 @@ Neste vídeo, aprendemos sobre a importância de organizar nosso código em arqu
 
 5. **Organização do Código**:
    - A prática de manter o código organizado e separar diferentes funcionalidades em arquivos distintos foi enfatizada.
-
 <br>

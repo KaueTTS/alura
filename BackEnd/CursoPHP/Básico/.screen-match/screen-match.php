@@ -1,0 +1,32 @@
+<?php
+
+require __DIR__ . "/funcoes.php";
+
+echo "Welcome to Screen Match!\n";
+
+$nomeFilme = "Sonic";
+$anoLancamento = 2025;
+$quantidadeDeNotas = $argc - 1;
+$notas = [];
+
+for ($i = 1; $i < $argc; $i++) {
+    $notas[] = (float) $argv[$i];
+}
+
+$notaFilme = array_sum($notas) / $quantidadeDeNotas;
+$planoPrime = true;
+$primeStatus = incluidoNoPlano($planoPrime, $anoLancamento);
+
+exibeMensagemLancamento($anoLancamento, $planoPrime);
+
+$genero = match ($nomeFilme) {
+    "Sonic" => "Ação/Aventura",
+    "Harry Potter" => "Fantasia",
+    "Velozes e Furiosos" => "Ação",
+    default => "Gênero desconhecido"
+};
+
+echo "-\t Filme: " . $nomeFilme . "\n";
+echo "-\t Nota do filme: $notaFilme\n";
+echo "-\t Ano de lançamento: $anoLancamento\n";
+echo "-\t O gênero do filme é: $genero";
