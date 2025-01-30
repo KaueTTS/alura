@@ -1,11 +1,15 @@
 # [ \n ]
 ```
-Ao colocar no texto, ele vai pular uma linha, 
+Ao colocar no texto, ele vai pular uma linha
 
-Exemplo "Kaue\n está aqui": 
+Exemplo:
 
-Kaue (em cima) 
-está aqui (em baixo)
+echo "Kaue\n está aqui" 
+
+    Kaue
+    está aqui
+
+Onde "Kaue" vai estar na linha de cima e "está aqui" vai estar na linha de baixo
 ```
 <br>
 
@@ -13,9 +17,11 @@ está aqui (em baixo)
 ```
 Ao colocar no texto, ele vai dar um espaçamento no texto 
 
-Exemplo "\t Esse é o texto no terminal": 
+Exemplo:
 
-        Esse é o texto no terminal
+echo "\t Esse é o texto no terminal" 
+
+    (espaçamento) Esse é o texto no terminal
 ```
 <br>
 
@@ -76,20 +82,20 @@ Exemplo:
 
 php nome-do-arquivo 10 9 8 7 6
 
-array(6) {
-  [0]=>
-  string(18) ".\screen-match.php"
-  [1]=>
-  string(2) "10"
-  [2]=>
-  string(1) "9"
-  [3]=>
-  string(1) "8"
-  [4]=>
-  string(1) "7"
-  [5]=>
-  string(1) "6"
-}
+    array(6) {
+      [0]=>
+      string(18) ".\screen-match.php"
+      [1]=>
+      string(2) "10"
+      [2]=>
+      string(1) "9"
+      [3]=>
+      string(1) "8"
+      [4]=>
+      string(1) "7"
+      [5]=>
+      string(1) "6"
+    }
 ``` 
 <br>
 
@@ -127,7 +133,11 @@ O *STDIN* é uma constante em PHP que representa a entrada padrão do programa, 
 
 Exemplo:
 
-$numero = (float) fgets(STDIN);
+echo "Digite seu nome: "
+$nome = (float) fgets(STDIN);
+echo "Olá, $nome"
+
+Ou seja, o que você digitar no terminal será armazenado na variável $nome
 ```
 <br>
 
@@ -172,7 +182,7 @@ Após a execução do código acima, o array $notas será ordenado como [5, 7, 8
 ```
 <br>
 
-# [ min () ]
+# [ min() ]
 ```
 A função min() em PHP é utilizada para encontrar o menor valor em um array ou entre uma lista de valores.
 
@@ -181,5 +191,61 @@ Exemplo:
 $notas = [10, 7, 8.5, 5, 9.3];
 $menorNota = min($notas);
 echo $menorNota; // Saída: 5
+```
+<br>
+
+# [strpos() ]
+```
+A função strpos() é usada para encontrar a posição da primeira ocorrência de um determinado caractere ou substring em uma string.
+
+Sua sintaxe é a seguinte:
+
+strpos(string $haystack, string $needle, int $offset = 0): int|false
+
+Onde:
+
+- $haystack: é a string na qual você está procurando.
+- $needle: é o caractere ou substring que você está procurando.
+- $offset: é um parâmetro opcional que especifica a posição a partir da qual você deseja iniciar a pesquisa (o padrão é 0, ou seja, o início da string).
+
+Exemplo: 
+
+Se tivermos a string "Thor: Ragnarok" e quisermos encontrar a posição do caractere :, podemos usar a seguinte chamada:
+
+$posicaoDoisPontos = strpos($filme['nome'], ':');
+
+Neste caso, $posicaoDoisPontos receberia o valor 4, pois o caractere : está na posição 4 da string.
+
+```
+<br>
+
+# [ substr() ]
+```
+A função substr() no PHP é usada para extrair uma substring de uma string.
+
+A função substr() retorna a substring extraída da string original.
+
+Exemplo:
+
+$nome = "Thor: Ragnarok";
+
+// Extrair a substring a partir da posição 0 até o final
+$primeiraParte = substr($nome, 0);
+// Resultado: "Thor: Ragnarok"
+
+// Extrair a substring a partir da posição 0 até a posição 4 (exclusive)
+$primeiraParte = substr($nome, 0, 4);
+// Resultado: "Thor"
+
+// Extrair a substring a partir da posição 6 até o final
+$segundaParte = substr($nome, 6);
+// Resultado: "Ragnarok"
+
+
+No primeiro exemplo, substr($nome, 0) extrai a substring a partir da posição 0 (início da string) até o final da string.
+
+No segundo exemplo, substr($nome, 0, 4) extrai a substring a partir da posição 0 até a posição 4 (exclusive), ou seja, os 4 primeiros caracteres da string.
+
+No terceiro exemplo, substr($nome, 6) extrai a substring a partir da posição 6 (após os dois-pontos) até o final da string.
 ```
 <br>
