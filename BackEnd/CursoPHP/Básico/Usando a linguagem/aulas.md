@@ -58,3 +58,9 @@ Neste vídeo, aprendemos sobre a importância de organizar nosso código em arqu
 5. **Organização do Código**:
    - A prática de manter o código organizado e separar diferentes funcionalidades em arquivos distintos foi enfatizada.
 <br>
+
+# O QUE APRENDEMOS?
+
+- Conhecemos funções que o PHP nos oferece por padrão, tanto para manipular strings quanto para manipular arrays.
+- Aprendemos a passar valores por referência ao invés de realizar cópias dos valores ao passá-los por parâmetro.
+- Entendemos como separar nossa aplicação em diversos arquivos e depois uni-los no momento da execução, utilizando `include` ou `require`.

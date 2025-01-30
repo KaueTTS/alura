@@ -182,6 +182,20 @@ Após a execução do código acima, o array $notas será ordenado como [5, 7, 8
 ```
 <br>
 
+# [ rsort() ]
+```
+A função sort() em PHP é utilizada para ordenar os elementos de um array em ordem descrescente.
+
+Exemplo:
+
+$notas = [0, 8, 7, 8.5, 5, 9.3];
+rsort($notas);
+var_dump($notas);
+
+Após a execução do código acima, o array $notas será ordenado como [9.3, 8.5, 8, 7, 5, 7]
+```
+<br>
+
 # [ min() ]
 ```
 A função min() em PHP é utilizada para encontrar o menor valor em um array ou entre uma lista de valores.
@@ -247,5 +261,17 @@ No primeiro exemplo, substr($nome, 0) extrai a substring a partir da posição 0
 No segundo exemplo, substr($nome, 0, 4) extrai a substring a partir da posição 0 até a posição 4 (exclusive), ou seja, os 4 primeiros caracteres da string.
 
 No terceiro exemplo, substr($nome, 6) extrai a substring a partir da posição 6 (após os dois-pontos) até o final da string.
+```
+<br>
+
+# [ explode() ]
+```
+A função explode() no PHP é utilizada para dividir uma string em um array, com base em um delimitador especificado. Por exemplo, se você tiver uma string com palavras separadas por vírgulas, pode usar explode() para criar um array onde cada elemento é uma palavra da string original. É muito útil para manipulação de strings e processamento de dados.
+
+Exemplo:
+
+$frutas = "maçã,banana,laranja";
+$arrayFrutas = explode(",", $frutas);
+// Resultado: $arrayFrutas = ["maçã", "banana", "laranja"];
 ```
 <br>
