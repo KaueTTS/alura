@@ -2,6 +2,7 @@
 ## Resumo da Aula: Definindo um formato
 
 Nesta aula, aprendemos sobre a manipulação de arquivos e a definição de formatos de dados, focando especialmente no **JSON**. 
+<br>
 
 ### Principais Pontos Abordados:
 
@@ -34,3 +35,10 @@ Depois, transformamos esse conteúdo JSON em um array associativo com a função
 Também vimos como atualizar a nota do filme no arquivo JSON e reexecutar o código para verificar a atualização.
 
 A aula enfatizou a importância da manipulação de arquivos em PHP e mencionou que existem funções adicionais para operações mais complexas, que podem ser exploradas posteriormente.
+<br>
+
+# O QUE APRENDEMOS?
+
+- Conhecemos o formato JSON e aprendemos a manipulá-lo com PHP através das funções `json_encode` e `json_decode`.
+- Aprendemos a ler e escrever em arquivos com funções como `file_get_contents` e `file_put_contents`.
+
