@@ -29,3 +29,18 @@ Primeiro, ao enviar o formulário, o PHP utiliza a variável mágica `$_POST` pa
 
 Por fim, ao enviar o formulário novamente, o arquivo `filme.json` é criado ou atualizado com os dados do filme, embora não haja saída visível na tela, pois não utilizamos `echo` ou `var_dump` no código PHP. A aula preparou o terreno para futuras lições sobre como exibir dados na tela, combinando PHP e HTML.
 <br>
+
+# [ Aula 3 ]
+## Resumo da Aula: PHP + HTMML
+
+Nesta aula, aprendemos como o PHP pode ser utilizado em conjunto com o HTML para desenvolvimento web. Um ponto importante abordado foi o padrão **POST/Redirect/GET**, que orienta a redirecionar uma requisição `POST` para uma requisição `GET`, evitando a exibição de dados diretamente na tela.
+
+Vimos como usar a função `header()` para redirecionar o usuário para uma página de sucesso, passando parâmetros pela URL. Um exemplo prático foi apresentado, onde os dados de um filme eram salvos em um arquivo JSON e, em seguida, o usuário era redirecionado para uma página que exibia uma mensagem de sucesso com o nome do filme.
+
+Além disso, aprendemos a acessar parâmetros da URL utilizando a variável `$_GET`, e a importância de abrir e fechar as tags PHP corretamente para que o código funcione como esperado. Por fim, foi destacado que os códigos apresentados não são os mais seguros ou performáticos, mas servem como uma introdução ao uso do PHP na web.
+
+# O QUE APRENDEMOS?
+
+- Aprendemos como a Web funciona e como o PHP é executado em ambientes Web.
+- Utilizamos o servidor web embutido do PHP para termos um projeto executando e acessível pelo navegador.
+- Criamos código PHP que lê dados vindos de formulários e parâmetros da URL.

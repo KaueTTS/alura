@@ -32,14 +32,14 @@ echo "-\t Nota do filme: $notaFilme\n";
 echo "-\t Ano de lançamento: $anoLancamento\n";
 echo "-\t O gênero do filme é: $genero";
 
-$filme = criaFilme(
-    nome: "Sonic", 
-    anoLancamento: 2025, 
-    nota: 10, 
-    genero: "Ação/Aventura"
-);
+// $filme = criaFilme(
+//     nome: "Sonic", 
+//     anoLancamento: 2025, 
+//     nota: 10, 
+//     genero: "Ação/Aventura"
+// );
 
-echo $filme["genero"];
+// echo $filme["genero"];
 
-$filmeComoStringJson = json_encode($filme);
-file_put_contents(__DIR__ . "/filmes.json", $filmeComoStringJson);
+// $filmeComoStringJson = json_encode($filme);
+// file_put_contents(__DIR__ . "/filmes.json", $filmeComoStringJson);
