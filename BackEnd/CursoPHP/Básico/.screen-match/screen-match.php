@@ -30,3 +30,15 @@ echo "-\t Filme: " . $nomeFilme . "\n";
 echo "-\t Nota do filme: $notaFilme\n";
 echo "-\t Ano de lançamento: $anoLancamento\n";
 echo "-\t O gênero do filme é: $genero";
+
+$filme = [
+    "nome" => $nomeFilme,
+    "nota" => $notaFilme,
+    "ano" => $anoLancamento,
+    "prime" => $primeStatus
+];
+
+echo $filme["prime"];
+
+$filmeComoStringJson = json_encode($filme);
+file_put_contents(__DIR__ . "/filmes.json", $filmeComoStringJson);

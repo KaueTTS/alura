@@ -275,3 +275,26 @@ $arrayFrutas = explode(",", $frutas);
 // Resultado: $arrayFrutas = ["maçã", "banana", "laranja"];
 ```
 <br>
+
+# [ json_econde() ]
+```
+A função json_encode() em PHP é utilizada para converter uma variável PHP, como um array ou um objeto, em uma string no formato JSON (JavaScript Object Notation). Essa função é muito útil quando precisamos exportar dados de uma aplicação PHP para serem utilizados em outras linguagens ou sistemas, especialmente no contexto de aplicações web.
+
+Exemplo:
+
+$filme = [
+    "nome" => "Thor: Ragnarok",
+    "ano" => 2021,
+    "nota" => 7.8,
+    "genero" => "super-herói",
+];
+
+Para converter esse array em uma string JSON, você usaria a função json_encode() da seguinte forma:
+
+$jsonFilme = json_encode($filme);
+echo $jsonFilme;
+
+// saída
+{"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-herói"}
+```
+<br>
