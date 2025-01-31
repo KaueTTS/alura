@@ -25,14 +25,12 @@
                 </div>
             </fieldset>
 
-            <fieldset class="content">
-                <div>
-                    <label for="ano">Ano de lançamento</label>
-                    <input type="date" name="ano" id="ano" required>
-                </div>
-            </fieldset>
-
             <fieldset class="content nota-genero">
+                <div>
+                    <label for="ano">Lançamento</label>
+                    <input type="year" name="ano" id="ano" required>
+                </div>
+
                 <div>
                     <label for="nome">Nota</label>
                     <input type="number" name="nota" id="nota" required step="0.1">
