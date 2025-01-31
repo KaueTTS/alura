@@ -16,32 +16,38 @@
 
     <section class="container">
         <form action="exporta-arquivo.php" method="post">
-            <fieldset>
-                <label for="nome">Nome:</label> <br>
-                <input type="text" name="nome" id="nome" required>
+            <h2>Exportar filme</h2>
+
+            <fieldset class="content">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
             </fieldset>
 
-            <fieldset>
-                <label for="ano">Ano de lançamento:</label> <br>
-                <input type="year" name="ano" id="ano" required>
+            <fieldset class="content">
+                <div>
+                    <label for="ano">Ano de lançamento</label>
+                    <input type="date" name="ano" id="ano" required>
+                </div>
             </fieldset>
 
-            <fieldset>
-                <label for="nome">Nota:</label> <br>
-                <input type="number" name="nota" id="nota" required step="0.1">
-            </fieldset>
+            <fieldset class="content nota-genero">
+                <div>
+                    <label for="nome">Nota</label>
+                    <input type="number" name="nota" id="nota" required step="0.1">
+                </div>
 
-            <fieldset>
-                <label for="nome">Gênero:</label> <br>
-
-                <select name="genero" id="genero">
-                    <option value="super-heroi">Super-herói</option>
-                    <option value="comedia">Comédia</option>
-                    <option value="acao">Ação</option>
-                    <option value="acao">Terror</option>
-                </select>
+                <div>
+                    <label for="nome">Gênero</label>
+                    <select name="genero" id="genero">
+                        <option value="super-heroi">Super-herói</option>
+                        <option value="comedia">Comédia</option>
+                        <option value="acao">Ação</option>
+                        <option value="acao">Terror</option>
+                    </select>
+                </div>
             </fieldset>
-            <br>
             <input type="submit" value="Enviar">
         </form>
     </section>
