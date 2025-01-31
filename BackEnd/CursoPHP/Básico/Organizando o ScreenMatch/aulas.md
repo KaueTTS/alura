@@ -25,3 +25,22 @@ A separação dos arquivos é importante por motivos de:
 
 O vídeo conclui ressaltando que a organização do código é um passo essencial para evoluir em direção a um desenvolvimento mais profissional.
 <br>
+
+# [ Aula 3 ]
+## Resumo da Aula: Erros são nossos amigos
+
+No vídeo, aprendemos sobre a importância de entender e tratar erros no PHP. O instrutor demonstra como o PHP exibe mensagens de erro, começando pelo tipo de erro, seguido pela mensagem e a localização no código. 
+
+Um exemplo prático é apresentado, onde um erro fatal ocorre devido a um parâmetro nomeado incorretamente em uma função. Também é discutido a diferença entre `require` e `include`, mostrando que:
+
+- `require` interrompe a execução se o arquivo não for encontrado.
+- `include` apenas gera um aviso e continua a execução.
+
+O vídeo enfatiza que as mensagens de erro e aviso são descritivas e ajudam a identificar rapidamente onde o problema está no código. 
+<br>
+
+# O QUE APRENDEMOS?
+
+- Organizamos melhor nossa aplicação, separando em pastas os arquivos que possuem somente definições dos arquivos que efetivamente executam código.
+- Vimos como deixar nossa aplicação mais robusta desenvolvendo uma função para criar um filme com todos os dados necessários.
+- Aprendemos a ler os erros do PHP e a interpretar as severidades das mensagens como Warnings e Errors.
