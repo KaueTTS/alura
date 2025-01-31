@@ -1,0 +1,3 @@
+Se eu escrever qualquer coisa aqui vai aparecer no terminal
+Esse não vai
+PHP é incrível!
