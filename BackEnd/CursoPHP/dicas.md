@@ -276,7 +276,7 @@ $arrayFrutas = explode(",", $frutas);
 ```
 <br>
 
-# [ json_econde() ]
+# [ json_encode() ]
 ```
 A função json_encode() em PHP é utilizada para converter uma variável PHP, como um array ou um objeto, em uma string no formato JSON (JavaScript Object Notation). Essa função é muito útil quando precisamos exportar dados de uma aplicação PHP para serem utilizados em outras linguagens ou sistemas, especialmente no contexto de aplicações web.
 
@@ -296,5 +296,68 @@ echo $jsonFilme;
 
 // saída
 {"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-herói"}
+```
+<br>
+
+# [ json_decode() ]
+```
+A função json_decode é uma função do PHP que tem como objetivo converter uma string no formato JSON (JavaScript Object Notation) em uma estrutura de dados do PHP, como um array ou um objeto. Essa função é bastante útil quando você está lidando com dados que vêm de APIs ou de arquivos JSON, permitindo que você manipule esses dados de forma mais fácil em seu código.
+
+Exemplo:
+
+$json = '{"nome": "Filme Exemplo", "ano": 2023, "genero": "Ação"}';
+$filme = json_decode($json, true); // Retorna um array associativo
+
+echo $filme['nome']; // Saída: Filme Exemplo
+echo $filme['ano'];  // Saída: 2023
+```
+<br>
+
+# [ file_put_contents() ]
+```
+A função file_put_contents() é uma função do PHP que permite gravar dados em um arquivo. É uma maneira prática e rápida de criar ou sobrescrever arquivos com conteúdo específico. Essa função é bastante útil quando você precisa salvar informações, como logs, dados de configuração ou qualquer outro tipo de conteúdo gerado dinamicamente.
+
+Exemplo:
+
+$nomeArquivo = 'exemplo.txt';
+$conteudo = "Olá, este é um exemplo de uso da função file_put_contents!\n";
+
+// Grava o conteúdo no arquivo
+$resultado = file_put_contents($nomeArquivo, $conteudo);
+
+if ($resultado !== false) {
+    echo "Conteúdo gravado com sucesso!";
+} else {
+    echo "Erro ao gravar o conteúdo.";
+}
+```
+<br>
+
+# [ header() ]
+```
+A função header() é uma função do PHP que permite enviar cabeçalhos HTTP para o cliente (navegador). Essa função é fundamental para controlar como o conteúdo é tratado pelo navegador, como redirecionamentos, tipos de conteúdo, cache e muito mais.
+
+Exemplo:
+
+1. Redirecionamento: Você pode usar a função header() para redirecionar o usuário para outra página:
+
+header('Location: http://www.exemplo.com');
+exit(); // É importante usar exit() após um redirecionamento
+
+2. Definindo o Tipo de Conteúdo: Você pode especificar o tipo de conteúdo que está sendo enviado:
+
+header('Content-Type: application/json');
+
+3. Controlando o Cache: Você pode controlar o comportamento de cache do navegador:
+
+header('Cache-Control: no-cache, no-store, must-revalidate'); // Para não armazenar em cache
+header('Pragma: no-cache'); // Para navegadores antigos
+header('Expires: 0'); // Para expirar imediatamente
+```
+<br>
+
+# [ file_get_contents ]
+```
+
 ```
 <br>
