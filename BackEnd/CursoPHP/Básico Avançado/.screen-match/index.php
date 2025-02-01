@@ -43,5 +43,3 @@ echo "-\t O gênero do filme é: $genero";
 
 // $filmeComoStringJson = json_encode($filme);
 // file_put_contents(__DIR__ . "/filmes.json", $filmeComoStringJson);
-
-php -S localhost:8001 -t public

@@ -361,3 +361,5 @@ header('Expires: 0'); // Para expirar imediatamente
 
 ```
 <br>
+
+## Iniciar Servidor Local: php -S localhost:8001 -t public
