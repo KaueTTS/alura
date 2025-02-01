@@ -1,9 +1,10 @@
 <?php
 
 //include __DIR__ . "/src/funcoes.php";
+require __DIR__ . "/src/Model/Filme.php";
 require __DIR__ . "/src/funcoes.php";
 
-echo "Welcome to Screen Match!\n";
+echo "\nWelcome to Screen Match!\n";
 
 $nomeFilme = "Sonic";
 $anoLancamento = 2025;
@@ -27,19 +28,17 @@ $genero = match ($nomeFilme) {
     default => "Gênero desconhecido"
 };
 
-echo "-\t Filme: " . $nomeFilme . "\n";
-echo "-\t Nota do filme: $notaFilme\n";
+$filme = criaFilme(
+    nome: "Sonic", 
+    anoLancamento: 2025, 
+    nota: 10, 
+    genero: "Ação/Aventura"
+);
+
+echo "-\t Filme: $filme->nome\n";
+echo "-\t Nota: $notaFilme\n";
 echo "-\t Ano de lançamento: $anoLancamento\n";
-echo "-\t O gênero do filme é: $genero";
+echo "-\t Gênero: $genero\n\n";
 
-// $filme = criaFilme(
-//     nome: "Sonic", 
-//     anoLancamento: 2025, 
-//     nota: 10, 
-//     genero: "Ação/Aventura"
-// );
-
-// echo $filme["genero"];
-
-// $filmeComoStringJson = json_encode($filme);
-// file_put_contents(__DIR__ . "/filmes.json", $filmeComoStringJson);
+$filmeComoStringJson = json_encode($filme);
+file_put_contents(__DIR__ . "/filmes.json", $filmeComoStringJson);
