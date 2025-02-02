@@ -5,10 +5,14 @@ require __DIR__ . "/src/funcoes.php";
 
 echo "\nBem vindo ao Screen Match!\n";
 
-$filme = new Filme();
-$filme->defineNome("Vingadores");
-$filme->defineAnoLancamento(2019);
-$filme->defineGenero("Ação");
+$filme = new Filme(
+    'Vingadores',
+    2019,
+    'Ação'
+);
+// $filme->defineNome("Vingadores");
+// $filme->defineAnoLancamento(2019);
+// $filme->defineGenero("Ação");
 
 $filme->avalia(10);
 $filme->avalia(9);
