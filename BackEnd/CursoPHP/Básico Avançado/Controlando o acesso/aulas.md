@@ -59,3 +59,7 @@ A aula enfatizou a importância de manter as propriedades privadas para garantir
 <br>
 
 # O QUE APRENDEMOS
+
+- Aprendemos a criar métodos em nossas classes e vimos como eles funcionam por baixo dos panos para acessar as referências;
+- Conhecemos a famosa variável $this, que contém a referência para o objeto que gerou a execução do método;
+- Encapsulamos os dados do filme permitindo o acesso a eles somente através de métodos de acesso na classe Filme.

@@ -7,6 +7,19 @@ class Conta
     private string $numeroConta = "0000-0";
 
 
+    public function depositar(int $valorADepositar): void {
+        if ($valorADepositar > 0) {
+            $this->saldoEmCentavos += $valorADepositar;
+        }
+    }
+
+    public function sacar(int $valorASacar): void {
+        if ($valorASacar > 0 && $valorASacar <= $this->saldoEmCentavos) {
+            $this->saldoEmCentavos -= $valorASacar;
+        }
+    }
+
+
     public function setSaldoEmCentavos(int $saldoEmCentavos): void
     {
         $this->saldoEmCentavos = $saldoEmCentavos;
