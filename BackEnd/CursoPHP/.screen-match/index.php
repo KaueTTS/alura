@@ -1,44 +1,18 @@
 <?php
 
-//include __DIR__ . "/src/funcoes.php";
 require __DIR__ . "/src/Model/Filme.php";
 require __DIR__ . "/src/funcoes.php";
 
-echo "\nWelcome to Screen Match!\n";
+echo "\nBem vindo ao Screen Match!\n";
 
-$nomeFilme = "Sonic";
-$anoLancamento = 2025;
-$quantidadeDeNotas = $argc - 1;
-$notas = [];
+$filme = new Filme();
+$filme->nome = "Sonic";
+$filme->anoLancamento = 2025;
+$filme->genero = "Ação/Aventura";
 
-for ($i = 1; $i < $argc; $i++) {
-    $notas[] = (float) $argv[$i];
-}
+$filme->avalia(10);
+$filme->avalia(9);
 
-$notaFilme = array_sum($notas) / $quantidadeDeNotas;
-$planoPrime = true;
-$primeStatus = incluidoNoPlano($planoPrime, $anoLancamento);
+var_dump($filme);
 
-exibeMensagemLancamento($anoLancamento, $planoPrime);
-
-$genero = match ($nomeFilme) {
-    "Sonic" => "Ação/Aventura",
-    "Harry Potter" => "Fantasia",
-    "Velozes e Furiosos" => "Ação",
-    default => "Gênero desconhecido"
-};
-
-$filme = criaFilme(
-    nome: "Sonic", 
-    anoLancamento: 2025, 
-    nota: 10, 
-    genero: "Ação/Aventura"
-);
-
-echo "-\t Filme: $filme->nome\n";
-echo "-\t Nota: $notaFilme\n";
-echo "-\t Ano de lançamento: $anoLancamento\n";
-echo "-\t Gênero: $genero\n\n";
-
-$filmeComoStringJson = json_encode($filme);
-file_put_contents(__DIR__ . "/filmes.json", $filmeComoStringJson);
+echo $filme->media();
