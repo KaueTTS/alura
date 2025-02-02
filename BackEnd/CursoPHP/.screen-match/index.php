@@ -6,13 +6,16 @@ require __DIR__ . "/src/funcoes.php";
 echo "\nBem vindo ao Screen Match!\n";
 
 $filme = new Filme();
-$filme->nome = "Sonic";
-$filme->anoLancamento = 2025;
-$filme->genero = "Ação/Aventura";
+$filme->defineNome("Vingadores");
+$filme->defineAnoLancamento(2019);
+$filme->defineGenero("Ação");
 
 $filme->avalia(10);
 $filme->avalia(9);
 
 var_dump($filme);
 
-echo $filme->media();
+echo "\n -\t Filme: " . $filme->nome();
+echo "\n -\t Lançamento: " . $filme->anoLancamento();
+echo "\n -\t Nota: " . $filme->media();
+echo "\n -\t Gênero: " . $filme->genero();

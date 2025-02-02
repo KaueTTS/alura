@@ -32,3 +32,30 @@ A variável especial `this` é introduzida, apontando para o objeto que chamou u
 Neste vídeo, aprendemos sobre a importância de controlar o acesso às propriedades de uma classe em PHP, utilizando o modificador de acesso `private`. O exemplo apresentado envolve uma classe `Filme`, onde a propriedade `notas` é definida como privada para evitar que seja acessada diretamente de fora da classe. Isso é crucial para evitar erros, como a remoção acidental de notas, que poderia levar a problemas como a divisão por zero ao calcular a média.
 
 Além disso, discutimos que, embora seja possível tornar todas as propriedades privadas, isso pode impedir a criação correta de objetos da classe, já que não poderíamos atribuir valores a essas propriedades externamente. O vídeo conclui com a promessa de que, no próximo conteúdo, serão apresentadas técnicas para manter as propriedades privadas, mas ainda permitir o acesso quando necessário.
+<br>
+
+# [ Aula 4 ]
+## Resumo da Aula: Getters e setters
+
+Nesta aula do curso de PHP sobre Programação Orientada a Objetos, aprendemos sobre o controle de acesso às propriedades de uma classe, utilizando *getters* e *setters*.
+
+## Principais Pontos Abordados
+
+- **Propriedades Privadas**: As propriedades da classe `Filme` foram definidas como privadas, o que impede o acesso direto a elas. Para contornar isso, comentamos as linhas que tentavam atribuir valores diretamente às propriedades.
+
+- **Valores Padrão**: Definimos valores padrão para as propriedades `nome`, `anoLancamento` e `genero`.
+
+- **Getters**: Para acessar a propriedade privada `anoLancamento`, criamos um método público chamado `anoLancamento()`, que funciona como um *getter*, permitindo recuperar o valor dessa propriedade.
+
+- **Setters**: Implementamos um *setter*, chamado `defineAnoLancamento()`, que permite atribuir um valor a `anoLancamento`.
+
+## Exercício Proposto
+
+O exercício proposto foi a criação de *getters* e *setters* para as propriedades `nome` e `genero`.
+
+## Importância do Encapsulamento
+
+A aula enfatizou a importância de manter as propriedades privadas para garantir a integridade dos dados e a possibilidade de implementar regras de negócio no futuro.
+<br>
+
+# O QUE APRENDEMOS
