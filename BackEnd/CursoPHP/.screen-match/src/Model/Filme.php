@@ -7,9 +7,9 @@ class Filme {
 
     // Construtor
     public function __construct(
-        private string $nome, 
-        private int $anoLancamento, 
-        private string $genero
+        public readonly string $nome, 
+        public readonly int $anoLancamento, 
+        public readonly string $genero
     ) {
         $this->notas = [];
     }
@@ -24,28 +24,5 @@ class Filme {
         $quantidadeNotas = count($this->notas);
 
         return $somaNotas / $quantidadeNotas;
-    }
-
-    // Métodos de acesso
-    // public function defineNome(string $nome): void {
-    //     $this->nome = $nome;
-    // }  
-    // public function defineAnoLancamento(int $anoLancamento): void {
-    //     $this->anoLancamento = $anoLancamento;
-    // } 
-    // public function defineGenero(string $genero): void {
-    //     $this->genero = $genero;
-    // }
-
-    public function nome(): string {
-        return $this->nome;
-    }
-
-    public function anoLancamento(): int {
-        return $this->anoLancamento;
-    }
-    
-    public function genero(): string {
-        return $this->genero;
     }
 }
