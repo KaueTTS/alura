@@ -19,7 +19,7 @@ $filme->avalia(9);
 
 var_dump($filme);
 
-echo "\n -\t Filme: " . $filme->nome();
-echo "\n -\t Lançamento: " . $filme->anoLancamento();
+echo "\n -\t Filme: " . $filme->nome;
+echo "\n -\t Lançamento: " . $filme->anoLancamento;
 echo "\n -\t Nota: " . $filme->media();
-echo "\n -\t Gênero: " . $filme->genero();
+echo "\n -\t Gênero: " . $filme->genero;

@@ -358,7 +358,170 @@ header('Expires: 0'); // Para expirar imediatamente
 
 # [ file_get_contents ]
 ```
+A função `file_get_contents()` em PHP é usada para ler o conteúdo de um arquivo em uma string. É uma maneira simples e eficiente de obter o conteúdo de um arquivo inteiro em uma única operação.
 
+Exemplo:
+
+// Definição do Nome do Arquivo
+$filename = 'exemplo.txt';
+
+// Lê o conteúdo do arquivo
+$conteudo = file_get_contents($filename);
+
+// Verificação e Exibição do Conteúdo:
+if ($conteudo !== false) {
+    echo "Conteúdo do arquivo:\n";
+    echo $conteudo;
+} else {
+    echo "Erro ao ler o arquivo.";
+}
+```
+<br>
+
+# [ readonly ]
+```
+O conceito de `readonly` foi introduzido na versão **8.1** do PHP e permite definir propriedades de uma classe que podem ser atribuídas apenas uma vez, geralmente no momento da construção do objeto. 
+
+- **Atribuição Única**: Você pode definir o valor da propriedade no construtor da classe, mas não poderá mudá-lo depois.
+- **Imutabilidade**: Isso garante que certas informações permaneçam constantes e não sejam acidentalmente modificadas em outras partes do código.
+
+Exemplo:
+
+class Exemplo {
+    public readonly string $propriedade;
+
+    public function __construct(string $valor) {
+        $this->propriedade = $valor;
+    }
+}
+
+$exemplo = new Exemplo("Valor Inicial");
+// $exemplo->propriedade = "Novo Valor"; // Isso causaria um erro
+```
+<br>
+
+# [ class ]
+```
+Uma classe é um modelo que define a estrutura e o comportamento de um objeto. Ela é um dos pilares da programação orientada a objetos (POO) e permite que você agrupe dados e funções que operam sobre esses dados.
+
+Uma classe pode conter:
+
+    Propriedades: São variáveis que armazenam o estado do objeto. Elas podem ser públicas, privadas ou protegidas.
+
+    Métodos: São funções que definem o comportamento do objeto. Eles podem manipular as propriedades da classe e realizar ações.
+
+Exemplo:
+
+class Carro {
+    public string $modelo;
+    public string $cor;
+
+    public function __construct(string $modelo, string $cor) {
+        $this->modelo = $modelo;
+        $this->cor = $cor;
+    }
+
+    public function exibirDetalhes() {
+        return "Modelo: $this->modelo, Cor: $this->cor";
+    }
+}
+
+$meuCarro = new Carro("Fusca", "azul");
+echo $meuCarro->exibirDetalhes(); // Saída: Modelo: Fusca, Cor: azul
+
+Instanciação: Para usar uma classe, você cria uma instância dela, que é um objeto. No exemplo acima, $meuCarro é uma instância da classe Carro.
+
+Construtor: O método __construct é chamado automaticamente quando um objeto é criado. Ele é usado para inicializar as propriedades do objeto.
+
+Encapsulamento: Você pode controlar o acesso às propriedades e métodos usando modificadores de visibilidade (public, private, protected).
+```
+<br>
+
+# [ public / private ]
+```
+Os modificadores de visibilidade public e private em PHP são usados para controlar o acesso às propriedades e métodos de uma classe. Eles são fundamentais para o conceito de encapsulamento na programação orientada a objetos.
+
+Public
+
+    Acesso: Quando uma propriedade ou método é declarado como public, ele pode ser acessado de qualquer lugar, tanto dentro da classe quanto fora dela. Isso significa que qualquer código que tenha uma referência ao objeto pode acessar e modificar essas propriedades ou chamar esses métodos.
+
+Exemplo:
+
+class Exemplo {
+    public string $mensagem;
+
+    public function __construct(string $mensagem) {
+        $this->mensagem = $mensagem;
+    }
+
+    public function mostrarMensagem() {
+        return $this->mensagem;
+    }
+}
+
+$objeto = new Exemplo("Olá, mundo!");
+echo $objeto->mostrarMensagem(); // Saída: Olá, mundo!
+
+
+Private
+
+    Acesso: Quando uma propriedade ou método é declarado como private, ele só pode ser acessado dentro da própria classe. Isso significa que nenhum código fora da classe pode acessar ou modificar essas propriedades ou chamar esses métodos. Isso é útil para proteger dados sensíveis e garantir que a lógica interna da classe não seja alterada de fora.
+
+Exemplo: 
+
+class Exemplo {
+    private string $mensagem;
+
+    public function __construct(string $mensagem) {
+        $this->mensagem = $mensagem;
+    }
+
+    public function mostrarMensagem() {
+        return $this->mensagem;
+    }
+}
+
+$objeto = new Exemplo("Olá, mundo!");
+// echo $objeto->mensagem; // Isso causaria um erro, pois $mensagem é private
+echo $objeto->mostrarMensagem(); // Saída: Olá, mundo!
+
+Public: Acessível de qualquer lugar.
+Private: Acessível apenas dentro da própria classe.
+```
+<br>
+
+# [ __construct ]
+```
+O método __construct é um método especial em PHP conhecido como construtor. Ele é chamado automaticamente quando uma nova instância de uma classe é criada. O principal objetivo do construtor é inicializar as propriedades do objeto e preparar o estado inicial do mesmo.
+
+Características do __construct
+
+    1. Inicialização: O construtor é usado para definir valores iniciais para as propriedades do objeto. Isso é especialmente útil quando você deseja garantir que o objeto comece em um estado válido.
+
+    2. Parâmetros: O construtor pode aceitar parâmetros, permitindo que você passe valores ao criar a instância do objeto. Esses valores podem ser usados para inicializar as propriedades.
+
+    3. Não Retorna Valor: O método __construct não deve retornar nenhum valor. Seu propósito é apenas configurar o objeto.
+
+Exemplo:
+
+class Carro {
+    public string $modelo;
+    public string $cor;
+
+    // Construtor
+    public function __construct(string $modelo, string $cor) {
+        $this->modelo = $modelo; // Inicializa a propriedade modelo
+        $this->cor = $cor;       // Inicializa a propriedade cor
+    }
+
+    public function exibirDetalhes() {
+        return "Modelo: $this->modelo, Cor: $this->cor";
+    }
+}
+
+// Criando uma nova instância da classe Carro
+$meuCarro = new Carro("Fusca", "azul");
+echo $meuCarro->exibirDetalhes(); // Saída: Modelo: Fusca, Cor: azul
 ```
 <br>
 
