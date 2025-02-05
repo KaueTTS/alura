@@ -525,4 +525,56 @@ echo $meuCarro->exibirDetalhes(); // Saída: Modelo: Fusca, Cor: azul
 ```
 <br>
 
+# [ enum ]
+```
+Um enum (abreviação de "enumeration") é um tipo especial de dado que permite definir um conjunto finito de valores possíveis. Em vez de usar strings ou números para representar esses valores, um enum fornece uma maneira mais clara e segura de trabalhar com dados que têm um número limitado de opções.
+
+Por que usar enums?
+
+    1. Clareza: Ao usar enums, você torna o código mais legível. Em vez de passar strings como "ação", "comédia", "terror", você usa valores bem definidos como Genero::Acao, o que deixa claro que esses valores são específicos e limitados.
+
+    2. Segurança: Com enums, você garante que apenas os valores definidos podem ser usados. Se alguém tentar passar um valor que não está na lista de enums, o código gerará um erro. Isso ajuda a evitar bugs e garante que os dados sejam válidos.
+
+    3. Organização: Enums ajudam a organizar o código, agrupando valores relacionados em um único tipo. Isso facilita a manutenção e a compreensão do código.
+
+Exemplo:
+
+enum Genero {
+    case Acao;
+    case Comedia;
+    case Terror;
+    case SuperHeroi;
+    case Drama;
+}
+
+$filme = new Filme(
+    'Thor: Ragnarok',
+    2021,
+    Genero::SuperHeroi
+);
+
+```
+<br>
+
+# [ match() ]
+```
+Ela é semelhante à estrutura switch, mas com algumas diferenças importantes. A expressão match é mais concisa, retorna um valor e não requer break para evitar o "fall-through".
+
+Exemplo:
+
+$nota = 85;
+
+$resultado = match (true) {
+    $nota >= 90 => 'A',
+    $nota >= 80 => 'B',
+    $nota >= 70 => 'C',
+    $nota >= 60 => 'D',
+    default => 'F',
+};
+
+echo "A nota é: $resultado";
+```
+<br>
+
+
 ## Iniciar Servidor Local: php -S localhost:8001 -t public
