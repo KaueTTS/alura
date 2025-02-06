@@ -29,6 +29,6 @@ A aula nos preparou para corrigir erros e implementar a herança de forma eficaz
 <br>
 
 # [ Aula 3 ]
-## Resumo da Aula:
+## Resumo da Aula: Especializando as classes
 
 <br>

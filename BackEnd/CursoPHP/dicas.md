@@ -576,4 +576,51 @@ echo "A nota é: $resultado";
 ```
 <br>
 
+# [ extends ]
+```
+No PHP, a palavra reservada extends é utilizada para criar uma subclasse que herda as propriedades e métodos de uma superclasse (ou classe pai). Isso faz parte do conceito de herança, que é um dos pilares da programação orientada a objetos.
+
+Como funciona a herança?
+
+    Quando uma classe estende outra, ela herda todas as características da classe pai, podendo também adicionar novas propriedades e métodos ou sobrescrever os métodos existentes. Isso permite que você reutilize código e crie uma hierarquia de classes mais organizada.
+
+Exemplo:
+
+class Animal {
+    public function fazerSom() {
+        return "Som de animal";
+    }
+}
+
+class Gato extends Animal {
+    public function fazerSom() {
+        return "Miau";
+    }
+}
+
+class Cachorro extends Animal {
+    public function fazerSom() {
+        return "Au Au";
+    }
+}
+
+$gato = new Gato();
+$cachorro = new Cachorro();
+
+echo $gato->fazerSom(); // Saída: Miau
+echo $cachorro->fazerSom(); // Saída: Au Au
+?>
+
+1. Classe Pai (Animal):
+A classe Animal possui um método chamado fazerSom(), que retorna uma string genérica.
+
+2. Subclasses (Gato e Cachorro):
+As classes Gato e Cachorro estendem a classe Animal. Isso significa que elas herdam o método fazerSom().
+Ambas as subclasses sobrescrevem o método fazerSom() para fornecer um som específico de cada animal.
+
+3. Instanciando as Classes:
+Criamos instâncias de Gato e Cachorro e chamamos o método fazerSom(), que retorna o som específico de cada um.
+```
+<br>
+
 ## Iniciar Servidor Local: php -S localhost:8001 -t public
