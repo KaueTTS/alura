@@ -2,7 +2,7 @@
 
 class Titulo {
 
-    private array $notas;
+    protected array $notas;
 
     public function __construct(
         public readonly string $nome, 
