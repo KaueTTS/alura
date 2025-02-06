@@ -38,3 +38,7 @@ Repetimos esse processo na classe `Serie`, garantindo que ela também inicializa
 <br>
 
 # O QUE APRENDEMOS
+
+- Aprendemos um dos mais importantes pilares da Orientação a Objetos: a Herança;
+- Vimos como podemos compartilhar código através da Herança, embora nem sempre essa seja a abordagem ideal;
+- Aprendemos a chamar membros da classe base através da palavra parent do PHP.
