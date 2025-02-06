@@ -1,0 +1,1 @@
+{"nome":"Thor: Ragnarok","anoLancamento":2021,"genero":"super-her\u00f3i","nota":7.8}
