@@ -59,7 +59,7 @@ Neste vídeo, aprendemos sobre a importância de organizar nosso código em arqu
    - A prática de manter o código organizado e separar diferentes funcionalidades em arquivos distintos foi enfatizada.
 <br>
 
-# O QUE APRENDEMOS?
+# O QUE APRENDEMOS
 
 - Conhecemos funções que o PHP nos oferece por padrão, tanto para manipular strings quanto para manipular arrays.
 - Aprendemos a passar valores por referência ao invés de realizar cópias dos valores ao passá-los por parâmetro.

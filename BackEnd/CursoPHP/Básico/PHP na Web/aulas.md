@@ -39,7 +39,7 @@ Vimos como usar a função `header()` para redirecionar o usuário para uma pág
 
 Além disso, aprendemos a acessar parâmetros da URL utilizando a variável `$_GET`, e a importância de abrir e fechar as tags PHP corretamente para que o código funcione como esperado. Por fim, foi destacado que os códigos apresentados não são os mais seguros ou performáticos, mas servem como uma introdução ao uso do PHP na web.
 
-# O QUE APRENDEMOS?
+# O QUE APRENDEMOS
 
 - Aprendemos como a Web funciona e como o PHP é executado em ambientes Web.
 - Utilizamos o servidor web embutido do PHP para termos um projeto executando e acessível pelo navegador.

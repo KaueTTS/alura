@@ -28,7 +28,7 @@ Vimos que, ao invés de usar strings para representar o gênero em nossa classe 
 Por fim, discutimos que essa abordagem garante que o parâmetro de gênero seja sempre um valor válido, aumentando a precisão na modelagem dos dados. Na próxima aula, abordaremos como modelar séries, que compartilham características com filmes, mas possuem suas próprias especificidades.
 <br>
 
-# O QUE APRENDEMOS?
+# O QUE APRENDEMOS
 
 - Conhecemos o método construtor e vimos como garantir que todos os dados sempre sejam inicializados ao criar um objeto;
 

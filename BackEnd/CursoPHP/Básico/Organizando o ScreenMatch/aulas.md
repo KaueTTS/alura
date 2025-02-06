@@ -39,7 +39,7 @@ Um exemplo prático é apresentado, onde um erro fatal ocorre devido a um parâm
 O vídeo enfatiza que as mensagens de erro e aviso são descritivas e ajudam a identificar rapidamente onde o problema está no código. 
 <br>
 
-# O QUE APRENDEMOS?
+# O QUE APRENDEMOS
 
 - Organizamos melhor nossa aplicação, separando em pastas os arquivos que possuem somente definições dos arquivos que efetivamente executam código.
 - Vimos como deixar nossa aplicação mais robusta desenvolvendo uma função para criar um filme com todos os dados necessários.

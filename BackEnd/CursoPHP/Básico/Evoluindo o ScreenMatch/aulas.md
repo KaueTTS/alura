@@ -46,12 +46,14 @@ Isso inclui o uso de `void` para indicar que a função não retorna nenhum valo
 
 ### Benefícios do Uso de Tipos
 
-O uso de tipos torna o código mais robusto e seguro, evitando erros causados por valores incorretos.<br>
-Ferramentas como IDEs e editores de texto podem fornecer avisos sobre erros de tipos, mesmo antes de executar o código.<br>
+O uso de tipos torna o código mais robusto e seguro, evitando erros causados por valores incorretos.
+
+Ferramentas como IDEs e editores de texto podem fornecer avisos sobre erros de tipos, mesmo antes de executar o código.
+
 Isso aumenta a confiabilidade e a manutenibilidade do código, pois outros desenvolvedores podem entender melhor o que cada função espera e retorna.
 <br>
 
-# O QUE APRENDEMOS?
+# O QUE APRENDEMOS
 
 - Conhecemos os conceitos de subrotinas e funções, permitindo a separação e reutilização de trechos de nosso código.
 - Aprendemos a criar funções no PHP, incluindo o recebimento de parâmetros e retorno de valores.

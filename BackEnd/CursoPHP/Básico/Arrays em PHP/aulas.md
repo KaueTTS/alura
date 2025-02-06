@@ -46,7 +46,6 @@ Para acessar um valor, utiliza-se a variável do array e a chave entre colchetes
 Exemplo para acessar o nome do filme:
 
 ```echo $filme['nome']; // Exibe "Thor: Ragnarok"```
-
 <br>
 
 # [ Aula 3 ] 
@@ -73,13 +72,9 @@ Exemplo para acessar o nome do filme:
 
 ### Função `array_sum`
 - A função `array_sum` é apresentada como uma forma simplificada de somar os elementos de um array.
-
-### Conclusão
-- A aula encerra com a importância dos arrays em PHP e a promessa de desafios práticos na próxima aula.
-
 <br>
 
-# O QUE APRENDEMOS?
+# O QUE APRENDEMOS
 
 - Conhecemos o array, um dos tipos de dados mais importantes do PHP, sendo útil em determinados cenários e amplamente utilizado;
 

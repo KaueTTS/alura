@@ -22,7 +22,6 @@ Implementamos um exemplo prático onde, dependendo do ano de lançamento, o prog
 - "Esse filme não é um lançamento"
 
 Com isso, conseguimos entender como controlar o fluxo da aplicação e tomar decisões com base em condições.
-
 <br>
 
 # [ Aula 2 ]
@@ -37,7 +36,6 @@ Exploramos como controlar o fluxo em PHP utilizando expressões condicionais.
 - **Determinação de Gênero**: Aprendemos a utilizar a *match expression* para determinar o gênero de um filme com base no nome armazenado na variável `$nomeFilme`. Destacamos a importância de incluir um caso padrão (`default`) para lidar com valores que não correspondem a nenhuma opção.
 
 - **Diferença entre `if` e Match**: Enfatizamos que a *match expression* é uma expressão que retorna um valor, enquanto o `if` não.
-
 <br>
 
 # [ Aula 3 ]
@@ -60,7 +58,6 @@ A estrutura `for` é detalhada, mostrando suas três partes:
 O instrutor também menciona a possibilidade de simplificar o incremento usando o operador `++`. 
 
 Ao final, é ressaltado que o `for` é uma das estruturas de repetição mais utilizadas no dia a dia da programação, mas que existem outras opções que serão abordadas em vídeos futuros.
-
 <br>
 
 # [ Aula 4 ]

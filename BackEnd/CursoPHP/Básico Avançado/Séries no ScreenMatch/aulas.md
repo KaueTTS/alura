@@ -30,5 +30,11 @@ A aula nos preparou para corrigir erros e implementar a herança de forma eficaz
 
 # [ Aula 3 ]
 ## Resumo da Aula: Especializando as classes
+Nesta aula, aprendemos sobre a especialização de classes em PHP, focando no conceito de herança. Vimos que tanto a classe `Serie` quanto a classe `Filme` herdam características da classe base `Titulo`, o que significa que elas compartilham atributos como `$nome`, `$anoLancamento` e `$genero`.
 
+Identificamos um problema no construtor da classe `Filme`, que inicialmente recebia apenas um parâmetro (`$duracaoEmMinutos`). Para resolver isso, adicionamos os parâmetros necessários para que o construtor da classe `Filme` pudesse receber todos os dados e, em seguida, chamamos o construtor da classe base `Titulo` usando `parent::__construct()`, passando os parâmetros corretos.
+
+Repetimos esse processo na classe `Serie`, garantindo que ela também inicializasse os atributos da classe base corretamente. Após realizar essas alterações, testamos a criação de um objeto do tipo `Serie` no arquivo `index.php`, onde conseguimos acessar e manipular os dados da série da mesma forma que fazíamos com os filmes.
 <br>
+
+# O QUE APRENDEMOS
