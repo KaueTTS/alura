@@ -437,7 +437,7 @@ Encapsulamento: Você pode controlar o acesso às propriedades e métodos usando
 ```
 <br>
 
-# [ public / private ]
+# [ public / private / protected ]
 ```
 Os modificadores de visibilidade public e private em PHP são usados para controlar o acesso às propriedades e métodos de uma classe. Eles são fundamentais para o conceito de encapsulamento na programação orientada a objetos.
 
@@ -485,8 +485,14 @@ $objeto = new Exemplo("Olá, mundo!");
 // echo $objeto->mensagem; // Isso causaria um erro, pois $mensagem é private
 echo $objeto->mostrarMensagem(); // Saída: Olá, mundo!
 
+
+Protected 
+
+    Atributos ou métodos declarados como protected podem ser acessados dentro da própria classe e também em suas subclasses. No entanto, não podem ser acessados de fora da classe. Isso permite que as subclasses utilizem e modifiquem esses atributos diretamente, mantendo um nível de proteção em relação ao acesso externo.
+
 Public: Acessível de qualquer lugar.
 Private: Acessível apenas dentro da própria classe.
+Protected: Acessível para classes e subclasses.
 ```
 <br>
 
