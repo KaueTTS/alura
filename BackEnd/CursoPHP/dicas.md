@@ -576,5 +576,4 @@ echo "A nota é: $resultado";
 ```
 <br>
 
-
 ## Iniciar Servidor Local: php -S localhost:8001 -t public
