@@ -12,6 +12,7 @@ class Titulo {
         $this->notas = [];
     }
 
+    // Cálculo das notas
     public function avalia(float $nota): void {
         $this->notas[] = $nota;
     }
@@ -21,5 +22,10 @@ class Titulo {
         $quantidadeNotas = count($this->notas);
 
         return $somaNotas / $quantidadeNotas;
+    }
+
+    // Tempo de filme
+    public function duracaoEmMinutos(): int {
+        return 0;
     }
 }
