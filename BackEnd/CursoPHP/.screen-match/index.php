@@ -56,3 +56,11 @@ echo "\n -\t Lançamento: {$serie->anoLancamento}";
 echo "\n -\t Nota: {$serie->media()}";
 echo "\n -\t Gênero: {$serie->genero->name}";
 echo "\n -\t Temporadas: {$serie->temporadas}";
+
+
+$calculadora = new CalculadoraDeMaratona();
+$calculadora->inclui($filme);
+$calculadora->inclui($serie);
+$duracao = $calculadora->duracao();
+
+echo "\n\nPara maratonar o filme e a série você precisará de {$duracao} minutos\n";
