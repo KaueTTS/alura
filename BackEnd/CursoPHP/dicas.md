@@ -629,4 +629,75 @@ Criamos instâncias de Gato e Cachorro e chamamos o método fazerSom(), que reto
 ```
 <br>
 
+# [ #[Override] ]
+```
+O atributo #[Override] é uma anotação que você pode usar em PHP para indicar que um método está sobrescrevendo um método da classe pai. Essa prática é muito útil, pois ajuda a tornar o código mais claro e a evitar erros.
+
+Quando você utiliza #[Override], está sinalizando para quem lê o código (e também para a IDE) que aquele método é uma implementação específica de um método que já existe na classe base. Isso traz algumas vantagens:
+
+    1. *Clareza*: Fica evidente que o método foi criado para substituir uma implementação anterior, facilitando a compreensão do código.
+
+    2. *Verificação de Erros*: Se você escrever o nome do método errado ou não corresponder à assinatura do método da classe pai, a IDE pode alertá-lo sobre isso. Assim, você evita erros que poderiam passar despercebidos.
+
+    3. *Documentação*: Serve como uma forma de documentação, indicando que há uma relação entre o método da classe filha e o método da classe pai.
+
+Por exemplo, se você tem uma classe Titulo com um método abstrato duracaoEmMinutos, e uma classe Filme que implementa esse método, você pode usar #[Override] na classe Filme para deixar claro que está sobrescrevendo o método da classe Titulo
+
+Exemplo:
+
+class Filme extends Titulo
+{
+    #[Override]
+    public function duracaoEmMinutos(): int
+    {
+        return $this->duracao; // Supondo que $duracao é um atributo da classe Filme
+    }
+}
+
+Dessa forma, você garante que a implementação do método duracaoEmMinutos na classe Filme está corretamente relacionada à definição na classe Titulo.
+```
+<br>
+
+# [ abstract ]
+```
+O termo abstract em PHP é utilizado para definir classes e métodos que são abstratos. Vamos entender cada um deles:
+
+Classe Abstrata
+
+    Uma classe abstrata é uma classe que não pode ser instanciada diretamente. Ou seja, você não pode criar um objeto dessa classe. O principal objetivo de uma classe abstrata é servir como base para outras classes. Ela pode conter métodos abstratos (que não têm implementação) e métodos concretos (que têm implementação).
+
+    Por exemplo, se você tem uma classe Titulo que representa um título de filme ou série, você pode torná-la abstrata para que não seja possível criar um objeto diretamente dela. Em vez disso, você criaria classes específicas, como Filme e Serie, que herdam de Titulo.
+
+Exemplo:
+
+abstract class Titulo
+{
+    abstract public function duracaoEmMinutos(): int; // Método abstrato
+}
+
+Método Abstrato
+
+    Um método abstrato é um método que é declarado em uma classe abstrata, mas não possui uma implementação. Isso significa que qualquer classe que herde da classe abstrata deve implementar esse método. Isso garante que todas as subclasses tenham uma implementação específica para esse método.
+
+    Por exemplo, no caso da classe Titulo, o método duracaoEmMinutos é abstrato, o que significa que cada título (seja um filme ou uma série) deve fornecer sua própria lógica para calcular a duração em minutos.
+
+Exemplo:
+
+class Filme extends Titulo
+{
+    private $duracao;
+
+    public function __construct($duracao)
+    {
+        $this->duracao = $duracao;
+    }
+
+    public function duracaoEmMinutos(): int
+    {
+        return $this->duracao; // Implementação específica para Filme
+    }
+}
+```
+<br>
+
 ## Iniciar Servidor Local: php -S localhost:8001 -t public

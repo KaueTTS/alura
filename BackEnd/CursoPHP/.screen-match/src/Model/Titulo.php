@@ -1,6 +1,6 @@
 <?php
 
-class Titulo {
+abstract class Titulo {
 
     protected array $notas;
 
@@ -25,7 +25,5 @@ class Titulo {
     }
 
     // Tempo de filme
-    public function duracaoEmMinutos(): int {
-        return 0;
-    }
+    abstract public function duracaoEmMinutos(): int;
 }

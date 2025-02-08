@@ -11,7 +11,7 @@ $filme = new Filme(
     nome: 'Vingadores',
     anoLancamento: 2019,
     genero: Genero::Acao,
-    duracaoEmMinutos: 180
+    duracao: 180
 );
 
 $filme->avalia(10);

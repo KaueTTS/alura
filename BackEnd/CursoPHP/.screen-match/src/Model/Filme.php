@@ -6,12 +6,13 @@ class Filme extends Titulo {
         string $nome, 
         int $anoLancamento, 
         Genero $genero,
-        public readonly int $duracaoEmMinutos
+        public readonly int $duracao
     ) {
         parent::__construct($nome, $anoLancamento, $genero);
     }
 
+    #[Override]
     public function duracaoEmMinutos(): int {
-        return $this->duracaoEmMinutos;
+        return $this->duracao;
     }
 }
