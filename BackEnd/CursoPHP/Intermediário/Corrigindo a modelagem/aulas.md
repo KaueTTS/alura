@@ -9,3 +9,10 @@ Adicionamos a palavra-chave `abstract` ao método, e ao fazer isso, a IDE nos aj
 
 Por fim, ao tentar executar o código, percebemos que a classe `Titulo` precisa ser declarada como abstrata, pois contém métodos abstratos. Essa mudança melhora a modelagem do código e garante que as subclasses implementem a lógica necessária para calcular a duração dos títulos.
 <br>
+
+# O QUE APRENDEMOS
+
+- Conhecemos o conceito de métodos abstratos, que são métodos que devem existir, mas ainda não possuem implementação;
+- Entendemos que toda classe que possui um método abstrato precisa ser também uma classe abstrata;
+- Vimos que classes abstratas não podem ser instanciadas já que são considerados tipos “incompletos”;
+- Aprendemos que todas as classes concretas que estendem classes abstratas precisam implementar os métodos que foram definidos como abstratos.
