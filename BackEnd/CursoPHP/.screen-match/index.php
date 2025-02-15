@@ -2,21 +2,23 @@
 
 require __DIR__ . "/src/Model/Genero.php";
 require __DIR__ . "/src/Model/Titulo.php";
+require __DIR__ . "/src/Model/Episodio.php";
 require __DIR__ . "/src/Model/Filme.php";
 require __DIR__ . "/src/Model/Serie.php";
 require __DIR__ . "/src/Calc/CalculadoraDeMaratona.php";
 require __DIR__ . "/src/funcoes.php";
 
+// Criando um filme
 $filme = new Filme(
     nome: 'Vingadores',
     anoLancamento: 2019,
     genero: Genero::Acao,
     duracao: 180
 );
-
 $filme->avalia(10);
 $filme->avalia(9);
 
+// Criando uma Série
 $serie = new Serie(
     nome: 'Breaking Bad',
     anoLancamento: 2008,
@@ -25,8 +27,15 @@ $serie = new Serie(
     episodiosPorTemporada: 10,
     minutosPorEpisodio: 45
 );
-
 $serie->avalia(10);
+
+/* Episodios */
+$episodio = new Episodio(
+    serie: $serie,
+    nome: 'Episódio piloto',
+    numero: 1
+);
+
 
 // var_dump($filme);
 // var_dump($serie);
