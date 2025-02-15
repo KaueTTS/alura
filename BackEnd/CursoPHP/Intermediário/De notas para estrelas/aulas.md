@@ -11,8 +11,25 @@ Por fim, abordamos a questão de como permitir que tanto títulos (séries e fil
 <br>
 
 # [ Aula 2 ]
-## Resumo da Aula: 
+## Resumo da Aula: Conversor em estrelas
 
+Nesta aula, aprendemos sobre a conversão de notas de 1 a 10 para estrelas, que vão de 0 a 5, e como isso se aplica ao sistema de avaliação de conteúdos audiovisuais chamado ScreenMatch.
+
+## Diagrama de Classes
+
+Começamos analisando o diagrama de classes, onde temos a classe abstrata `Titulo`, da qual `Serie` e `Filme` herdam. Também introduzimos a classe `Episodio`, que não deve herdar de `Titulo`, pois não faz sentido conceitualmente.
+
+## Primeira Solução
+
+Discutimos a primeira solução que seria fazer `Episodio` herdar de `Titulo`, mas isso não é adequado, pois um episódio não é um título independente. Em seguida, consideramos a ideia de usar herança múltipla com uma nova classe chamada `Avaliavel`, mas isso nos levaria ao problema do diamante, que é evitado em PHP.
+
+## Solução com Interfaces
+
+A solução proposta foi a utilização de **interfaces**. Criamos a interface `Avaliavel`, que pode ser implementada por `Titulo` e `Episodio`, permitindo que `Serie` e `Filme` herdem de `Titulo` e implementem os métodos da interface. Isso garante que todas as classes que implementam `Avaliavel` terão os métodos necessários sem os problemas da herança múltipla.
+
+## Alteração no ConversorNotaEstrela
+
+Por fim, alteramos o `ConversorNotaEstrela` para depender da interface `Avaliavel`, garantindo que qualquer instância dessa interface terá o método `media()`, que é essencial para a conversão das notas em estrelas.
 <br>
 
 # O QUE APRENDEMOS
