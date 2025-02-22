@@ -1,11 +1,13 @@
 <?php
 
+require __DIR__ . "/src/Model/Avaliavel.php";
 require __DIR__ . "/src/Model/Genero.php";
 require __DIR__ . "/src/Model/Titulo.php";
 require __DIR__ . "/src/Model/Episodio.php";
 require __DIR__ . "/src/Model/Filme.php";
 require __DIR__ . "/src/Model/Serie.php";
 require __DIR__ . "/src/Calc/CalculadoraDeMaratona.php";
+require __DIR__ . "/src/Calc/ConversorNotaEstrela.php";
 require __DIR__ . "/src/funcoes.php";
 
 // Criando um filme
@@ -27,6 +29,7 @@ $serie = new Serie(
     episodiosPorTemporada: 10,
     minutosPorEpisodio: 45
 );
+
 $serie->avalia(10);
 
 /* Episodios */
@@ -73,3 +76,6 @@ $calculadora->inclui($serie);
 $duracao = $calculadora->duracao();
 
 echo "\n\nPara maratonar o filme e a série você precisará de {$duracao} minutos\n";
+
+$conversor = new ConversorNotaEstrela();
+echo $conversor->converte($serie);

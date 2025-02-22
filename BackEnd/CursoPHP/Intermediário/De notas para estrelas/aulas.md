@@ -32,4 +32,31 @@ A solução proposta foi a utilização de **interfaces**. Criamos a interface `
 Por fim, alteramos o `ConversorNotaEstrela` para depender da interface `Avaliavel`, garantindo que qualquer instância dessa interface terá o método `media()`, que é essencial para a conversão das notas em estrelas.
 <br>
 
+# [ Aula 3 ]
+## Resumo da Aula: Extraindo uma interface
+
+Nesta aula, abordamos a criação e implementação da interface `Avaliavel` em PHP. Começamos identificando a necessidade de uma interface para padronizar métodos que devem ser implementados em diferentes classes, como `Episodio` e `Serie`.
+
+1. **Criação da Interface `Avaliavel`**:
+   - Criamos a interface `Avaliavel`, que contém os métodos:
+     - `avalia(float $nota): void`
+     - `media(): float`
+
+2. **Implementação na Classe `Episodio`**:
+   - Implementamos a interface `Avaliavel` na classe `Episodio`, adicionando também a propriedade `notas` para armazenar as avaliações.
+
+3. **Implementação na Classe `Serie`**:
+   - Percebemos que a classe `Serie` também precisava implementar a interface. Decidimos que a implementação seria mais eficiente se fosse feita na classe abstrata `Titulo`, evitando assim a duplicação de código.
+
+4. **Teste da Conversão de Notas**:
+   - Testamos a conversão de notas com a classe `ConversorNotaEstrela`, garantindo que o sistema funcionasse corretamente ao exibir a quantidade de estrelas com base nas notas avaliadas.
+
+5. **Identificação de Problemas**:
+   - A aula concluiu com a identificação de problemas de duplicação de código e a necessidade de melhorias na organização do código, que serão abordadas nas próximas aulas.
+<br>
+
 # O QUE APRENDEMOS
+
+- Evoluímos a modelagem do nosso sistema criando uma nova classe Episodio;
+- Vimos que a possibilidade de herança múltipla poderia nos trazer um famoso problema conhecido como problema diamante;
+- Aprendemos que o uso de interfaces nos permite ter uma classe implementando diversos tipos sem nenhum problema.

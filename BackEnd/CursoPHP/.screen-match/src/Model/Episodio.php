@@ -7,6 +7,6 @@ class Episodio {
         public readonly string $nome,
         public readonly int $numero
     ) {
-        
+        $this->notas = [];
     }
 }
