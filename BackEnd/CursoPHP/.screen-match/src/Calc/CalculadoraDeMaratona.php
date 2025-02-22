@@ -11,4 +11,5 @@ class CalculadoraDeMaratona {
     public function duracao(): int {
         return $this->duracaoMaratona;
     }
+    
 }

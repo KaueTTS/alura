@@ -7,4 +7,5 @@ class ConversorNotaEstrela {
 
         return round($nota) / 2;
     }
+    
 }

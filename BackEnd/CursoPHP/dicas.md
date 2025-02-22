@@ -700,4 +700,19 @@ class Filme extends Titulo
 ```
 <br>
 
+# [ implements ]
+```
+```
+<br>
+
+# [ interface ]
+```
+```
+<br>
+
+# [ trait ]
+```
+```
+<br>
+
 ## Iniciar Servidor Local: php -S localhost:8001 -t public

@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . "/src/Model/ComAvaliacao.php";
 require __DIR__ . "/src/Model/Avaliavel.php";
 require __DIR__ . "/src/Model/Genero.php";
 require __DIR__ . "/src/Model/Titulo.php";
@@ -8,7 +9,6 @@ require __DIR__ . "/src/Model/Filme.php";
 require __DIR__ . "/src/Model/Serie.php";
 require __DIR__ . "/src/Calc/CalculadoraDeMaratona.php";
 require __DIR__ . "/src/Calc/ConversorNotaEstrela.php";
-require __DIR__ . "/src/funcoes.php";
 
 // Criando um filme
 $filme = new Filme(
