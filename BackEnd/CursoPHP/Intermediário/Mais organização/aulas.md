@@ -43,7 +43,32 @@ Esses conceitos ajudam a manter o código organizado e a evitar conflitos de nom
 # [ Aula 3 ]
 ## Resumo da Aula: Autoload
 
+Nesta aula, aprendemos sobre a importância da organização do código em PHP utilizando *Namespaces* e como implementar o *autoload* para carregar classes automaticamente, evitando a necessidade de múltiplos `require` no arquivo `index.php`.
 
+### Principais Pontos Abordados
+
+1. **Namespaces**:
+   - Funcionam como pastas lógicas.
+   - A importação de símbolos é feita automaticamente em IDEs.
+
+2. **Implementação do Autoload**:
+   - Introduzimos a função `spl_autoload_register()`, que registra uma função chamada sempre que o PHP não encontra uma classe.
+   - Transformamos o nome da classe em um caminho de arquivo, substituindo o *Namespace* raiz pela pasta onde os arquivos estão localizados e adicionando a extensão `.php`.
+
+3. **Compatibilidade com Sistemas Operacionais**:
+   - Ajustamos o código para funcionar em diferentes sistemas operacionais utilizando a constante `DIRECTORY_SEPARATOR`.
+
+4. **Arquivo de Autoload**:
+   - Movemos a função de *autoload* para um arquivo separado chamado `autoload.php`.
+   - Implementamos uma verificação com `file_exists()` para garantir que o arquivo existe antes de incluí-lo, evitando erros.
+
+5. **PSR-4**:
+   - Discutimos a PSR-4, que é uma recomendação padrão para *autoloading* em PHP.
+   - A importância de manter o código organizado e robusto.
 <br>
 
 # O QUE APRENDEMOS
+
+- Conhecemos o conceito de herança horizontal através de traits, o que nos permite reutilizar código sem aumentar a complexidade de nossa hierarquia de tipos;
+- Aprendemos a organizar logicamente nossos tipos através do uso de namespaces, que são semelhantes a pastas lógicas;
+- Criamos um autoloader permitindo que todos os nosso tipos possam ser utilizados sem a necessidade de diversos requires em nosso código.
