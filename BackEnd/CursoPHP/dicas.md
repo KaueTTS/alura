@@ -700,17 +700,150 @@ class Filme extends Titulo
 ```
 <br>
 
-# [ implements ]
+# [ interface ]
 ```
+Uma interface no PHP define um conjunto de métodos que uma classe deve obrigatoriamente implementar. Ela não contém implementações dos métodos, apenas suas assinaturas.
+
+A interface é usada para garantir que diferentes classes sigam um mesmo contrato, o que facilita a organização do código e a reutilização de componentes.
+
+Características da Interface no PHP
+✅ Não pode conter propriedades (atributos).
+✅ Só pode conter métodos públicos (public).
+✅ Os métodos não têm implementação, apenas a assinatura.
+✅ Uma classe pode implementar múltiplas interfaces.
+
+Exemplo:
+
+<?php
+// Definição da Interface
+interface Animal {
+    public function fazerSom();
+}
+
+// Classe Cachorro implementando a interface Animal
+class Cachorro implements Animal {
+    public function fazerSom() {
+        return "Au au!";
+    }
+}
+
+// Classe Gato implementando a mesma interface Animal
+class Gato implements Animal {
+    public function fazerSom() {
+        return "Miau!";
+    }
+}
+
+// Criando objetos e chamando os métodos
+$cachorro = new Cachorro();
+echo $cachorro->fazerSom(); // Saída: Au au!
+
+$gato = new Gato();
+echo $gato->fazerSom(); // Saída: Miau!
+?>
+
+Diferença entre Interface e Classe Abstrata
+
+Característica	                    Interface	    Classe Abstrata
+Pode ter métodos implementados?	    ❌ Não	       ✅ Sim
+Pode ter propriedades?	            ❌ Não	       ✅ Sim
+Pode ter construtores?	            ❌ Não	       ✅ Sim
+Pode implementar múltiplas?	        ✅ Sim	       ❌ Não
 ```
 <br>
 
-# [ interface ]
+# [ implements ]
 ```
+O implements no PHP é usado para indicar que uma classe está implementando uma interface. Isso significa que a classe precisa obrigatoriamente definir os métodos declarados na interface.
+
+Exemplo:
+
+<?php
+// Definição da Interface
+interface Animal {
+    public function fazerSom();
+}
+
+// Classe implementando a interface
+class Cachorro implements Animal {
+    public function fazerSom() {
+        return "Au au!";
+    }
+}
+
+// Outra classe implementando a mesma interface
+class Gato implements Animal {
+    public function fazerSom() {
+        return "Miau!";
+    }
+}
+
+// Criando instâncias e chamando os métodos
+$cachorro = new Cachorro();
+echo $cachorro->fazerSom(); // Saída: Au au!
+
+$gato = new Gato();
+echo $gato->fazerSom(); // Saída: Miau!
+?>
+
+O que acontece aqui?
+1. Criamos a interface Animal com o método fazerSom().
+2. As classes Cachorro e Gato implementam a interface e definem o método obrigatoriamente.
+3. Criamos objetos das classes e chamamos os métodos normalmente.
 ```
 <br>
 
 # [ trait ]
+```
+No PHP, um "trait" é um mecanismo para reutilização de código em linguagens de herança única, como o PHP. Ele permite agrupar funcionalidades em uma única unidade e reutilizá-las em várias classes, sem a necessidade de herança múltipla.
+
+Exemplo:
+
+trait Loggable {
+    public function log($message) {
+        echo date('Y-m-d H:i:s') . ': ' . $message . PHP_EOL;
+    }
+}
+
+class User {
+    use Loggable;
+
+    public function createUser($name) {
+        $this->log("Usuário $name criado.");
+        // ... código para criar o usuário ...
+    }
+}
+
+class Product {
+    use Loggable;
+
+    public function createProduct($name) {
+        $this->log("Produto $name criado.");
+        // ... código para criar o produto ...
+    }
+}
+
+$user = new User();
+$user->createUser('João');
+
+$product = new Product();
+$product->createProduct('Camiseta');
+
+Neste exemplo, o trait Loggable fornece um método log() que pode ser usado pelas classes User e Product. Isso evita a duplicação do código de registro em log em ambas as classes.
+```
+<br>
+
+# [ spl_autoload_register ]
+```
+```
+<br>
+
+# [ str_replace ]
+```
+```
+<br>
+
+# [ require_once ]
 ```
 ```
 <br>

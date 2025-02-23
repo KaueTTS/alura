@@ -1,5 +1,7 @@
 <?php
 
+namespace ScreenMatch\Model;
+
 abstract class Titulo implements Avaliavel {
 
     use ComAvaliacao;
