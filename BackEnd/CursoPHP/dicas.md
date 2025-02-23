@@ -895,6 +895,39 @@ str_ireplace() é insensível a maiúsculas e minúsculas.
 
 # [ require_once ]
 ```
+No PHP, require_once é uma instrução usada para incluir um arquivo PHP dentro de outro script. A principal característica do require_once é que ele garante que o arquivo seja incluído apenas uma vez durante a execução do script.
+
+Como funciona:
+
+1. Inclusão do arquivo:
+    - Quando o PHP encontra uma instrução require_once, ele tenta abrir e executar o arquivo especificado.
+    - O código contido no arquivo incluído é executado como se estivesse presente no script principal.
+
+2. Verificação de inclusão:
+    - Antes de incluir o arquivo, o require_once verifica se ele já foi incluído anteriormente durante a execução do script.
+    - Se o arquivo já foi incluído, o require_once ignora a instrução e não o inclui novamente.
+
+3. Tratamento de erros:
+    - Se o arquivo especificado não for encontrado, o require_once gera um erro fatal e interrompe a execução do script.
+
+Diferença entre *require* e *require_once*:
+
+require: Inclui o arquivo toda vez que a instrução é encontrada, mesmo que ele já tenha sido incluído anteriormente.
+require_once: Inclui o arquivo apenas uma vez, evitando a inclusão duplicada.
+
+Exemplo:
+
+<?php
+
+// Inclui o arquivo 'funcoes.php' apenas uma vez
+require_once 'funcoes.php';
+
+// Chama uma função definida em 'funcoes.php'
+minhaFuncao();
+
+?>
+
+Neste exemplo, o arquivo funcoes.php será incluído apenas uma vez, mesmo que a instrução require_once seja executada várias vezes.
 ```
 <br>
 
