@@ -22,5 +22,5 @@ $episodio = new Episodio(
     1
 );
 
-$conversor = new ConversorNotaEstrela(5);
+$conversor = new ConversorNotaEstrela();
 echo $conversor->converte($episodio);
