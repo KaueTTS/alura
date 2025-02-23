@@ -8,9 +8,13 @@ spl_autoload_register(function (string $class) {
 
     $caminhoCompleto = __DIR__ . DIRECTORY_SEPARATOR . $caminho;
 
-    if (!file_exists($caminhoCompleto)) {
-        throw new \Exception("Arquivo não encontrado: {$caminho}");
+    if (file_exists($caminhoCompleto)) {
+        require_once $caminhoCompleto;
     }
 
     require_once __DIR__ . DIRECTORY_SEPARATOR . $caminho;
 });
+
+// if (!file_exists($caminhoCompleto)) {
+//     throw new \Exception("Arquivo não encontrado: {$caminho}");
+// }
