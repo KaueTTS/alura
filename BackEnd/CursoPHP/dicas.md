@@ -835,11 +835,61 @@ Neste exemplo, o trait Loggable fornece um método log() que pode ser usado pela
 
 # [ spl_autoload_register ]
 ```
+No PHP, spl_autoload_register é uma função poderosa que permite registrar várias funções de carregamento automático de classes. Isso significa que, quando você tenta usar uma classe que ainda não foi definida, o PHP chama automaticamente essas funções registradas para tentar carregar o arquivo que contém a definição da classe.
+
+Exemplo:
+
+<?php
+
+function carregarClasse($nomeClasse) {
+    $caminhoArquivo = __DIR__ . '/classes/' . $nomeClasse . '.php';
+    if (file_exists($caminhoArquivo)) {
+        require_once $caminhoArquivo;
+    }
+}
+
+spl_autoload_register('carregarClasse');
+
+// Agora você pode usar classes sem incluí-las manualmente
+$objeto = new MinhaClasse();
+
+?>
+
+Neste exemplo, a função carregarClasse é registrada como uma função de carregamento automático. Quando você tenta usar a classe MinhaClasse, o PHP chama automaticamente a função carregarClasse, que carrega o arquivo MinhaClasse.php.
 ```
 <br>
 
-# [ str_replace ]
+# [ str_replace && str_ireplace]
 ```
+No PHP, a função str_replace() é usada para substituir todas as ocorrências de uma substring dentro de uma string por outra substring. É uma ferramenta muito útil para manipular texto e realizar substituições em massa.
+
+<?php
+
+$string = "Olá mundo, mundo!";
+
+// Substituição simples
+$novaString = str_replace("mundo", "PHP", $string);
+echo $novaString; // Saída: Olá PHP, PHP!
+
+// Substituição com arrays
+$string = "maçã banana laranja";
+$procurar = ["maçã", "banana"];
+$substituir = ["pera", "uva"];
+$novaString = str_replace($procurar, $substituir, $string);
+echo $novaString; // Saída: pera uva laranja
+
+// Contando substituições
+$string = "Olá mundo, mundo!";
+$contagem = 0;
+$novaString = str_replace("mundo", "PHP", $string, $contagem);
+echo "Substituições: " . $contagem; // Saída: Substituições: 2
+
+?>
+
+Diferença entre str_replace() e str_ireplace():
+
+str_replace() é sensível a maiúsculas e minúsculas.
+str_ireplace() é insensível a maiúsculas e minúsculas.
 ```
 <br>
 
