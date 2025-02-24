@@ -2,7 +2,7 @@
 
 namespace ScreenMatch\Model;
 
-class Episodio {
+class Episodio implements Avaliavel {
 
     use ComAvaliacao;
 

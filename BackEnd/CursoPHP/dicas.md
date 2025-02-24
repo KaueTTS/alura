@@ -931,4 +931,25 @@ Neste exemplo, o arquivo funcoes.php será incluído apenas uma vez, mesmo que a
 ```
 <br>
 
+# [ try...catch ]
+```
+O try e catch são estruturas fundamentais para o tratamento de exceções em PHP.
+
+O bloco *try* é onde você coloca o código que pode gerar um erro ou uma exceção. A ideia é que você "tenta" executar esse código. Se tudo correr bem, a execução continua normalmente. No entanto, se ocorrer um erro, a execução é interrompida e o controle é passado para o bloco catch.
+
+O bloco *catch* é onde você lida com o erro que ocorreu no bloco try. Aqui, você pode especificar o tipo de exceção que deseja capturar. Por exemplo, se você espera que um erro de divisão por zero possa ocorrer, você pode capturá-lo usando catch(DivisionByZeroError $erro).
+
+Exemplo:
+
+Vamos imaginar que você está tentando calcular a média de notas, mas pode haver um erro de divisão por zero.
+
+try {
+    $nota = $avaliavel->media();
+    return round($nota) / 2;
+} catch (DivisionByZeroError $erro) {
+    return 0; // Retorna 0 se houver divisão por zero
+}
+```
+<br>
+
 ## Iniciar Servidor Local: php -S localhost:8001 -t public
