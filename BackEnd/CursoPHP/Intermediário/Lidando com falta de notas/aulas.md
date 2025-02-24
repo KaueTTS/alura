@@ -46,6 +46,30 @@ Nesta aula, aprendemos sobre o tratamento de exceções em PHP, focando especial
 
 # [ Aula 3 ]
 ## Resumo da Aula: Lidando com múltiplos tipos
+
+Nesta aula, aprendemos sobre como lidar com diferentes tipos de erros em PHP, especialmente no contexto de cálculos de médias e manipulação de notas.
+
+### Principais Tópicos Abordados
+
+1. **Erro de Divisão por Zero**:
+   - Discutimos o erro de divisão por zero, que é um problema comum em cálculos.
+
+2. **Gerando Erros Propositalmente**:
+   - Geramos um erro ao passar um número incorreto de argumentos para uma função, resultando em um `ArgumentCountError`.
+
+3. **Tratamento de Múltiplos Tipos de Erro**:
+   - Aprendemos a tratar múltiplos tipos de erro utilizando o operador pipe `|` no bloco `catch`, permitindo que tanto `DivisionByZeroError` quanto `ArgumentCountError` sejam tratados de forma semelhante.
+   - Vimos como exibir mensagens de erro específicas, caso desejássemos.
+
+4. **Hierarquia de Erros e Exceções**:
+   - Exploramos a hierarquia de erros e exceções no PHP, consultando a documentação para entender melhor as classes de erro disponíveis, como `ArithmeticError`, `BadFunctionCallException`, entre outras.
+
+5. **Captura Genérica de Erros**:
+   - Discutimos a possibilidade de capturar erros de forma mais genérica utilizando a classe `Throwable`, que abrange todos os tipos de erros e exceções, permitindo um tratamento mais abrangente.
 <br>
 
 # O QUE APRENDEMOS
+
+- Entendemos que mesmo que nosso código não possua erro de sintaxe, ainda é possível que erros aconteçam durante a execução;
+- Aprendemos a lidar com cenários alternativos (exceções) e erros através dos blocos try e catch;
+- Vimos que é possível lidar com mais de um tipo de problema definindo múltiplos blocos catch.

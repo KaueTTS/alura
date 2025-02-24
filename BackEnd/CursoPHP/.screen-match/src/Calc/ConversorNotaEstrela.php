@@ -2,8 +2,8 @@
 
 namespace ScreenMatch\Calc;
 
-use DivisionByZeroError;
 use ScreenMatch\Model\Avaliavel;
+use Throwable;
 
 class ConversorNotaEstrela {
     
@@ -11,9 +11,11 @@ class ConversorNotaEstrela {
         try {
             $nota = $avaliavel->media();
             return round($nota) / 2;
-        } catch (DivisionByZeroError $err) {
+        } catch (Throwable $err) {
             echo $err->getMessage() . ": Não é possível dividir por zero\n";
             return 0;
+        } finally {
+            echo "Finalizou!";
         }
     }
     
