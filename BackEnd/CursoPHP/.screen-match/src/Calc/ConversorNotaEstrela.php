@@ -14,9 +14,9 @@ class ConversorNotaEstrela {
         } catch (Throwable $err) {
             echo $err->getMessage() . ": Não é possível dividir por zero\n";
             return 0;
-        } finally {
-            echo "Finalizou!";
-        }
+        }   // finally {
+            //     echo "Finalizado! ";
+            // }
     }
     
 }

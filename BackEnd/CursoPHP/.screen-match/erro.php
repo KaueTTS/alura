@@ -22,5 +22,11 @@ $episodio = new Episodio(
     1
 );
 
-$conversor = new ConversorNotaEstrela();
-echo $conversor->converte($episodio);
+try {
+    $episodio->avalia(8);
+
+    $conversor = new ConversorNotaEstrela();
+    echo $conversor->converte($episodio);
+} catch(Exception $e) {
+    echo "Houve um problema: " . $e->getMessage();
+}

@@ -1,5 +1,5 @@
 # [ \n ]
-```
+```php
 Ao colocar no texto, ele vai pular uma linha
 
 Exemplo:
@@ -14,7 +14,7 @@ Onde "Kaue" vai estar na linha de cima e "está aqui" vai estar na linha de baix
 <br>
 
 # [ \t ]
-```
+```php
 Ao colocar no texto, ele vai dar um espaçamento no texto 
 
 Exemplo:
@@ -26,7 +26,7 @@ echo "\t Esse é o texto no terminal"
 <br>
 
 # [ $argv ]
-```
+```php
 $argv é um array que contém todos os argumentos passados para o script via linha de comando. O primeiro elemento ($argv[0]) é sempre o nome do script em si, e os elementos subsequentes são os argumentos que você passou.
 
 Exemplo:
@@ -55,7 +55,7 @@ $argv = [
 <br>
 
 # [ $argc ]
-```
+```php
 $argc é uma variável que contém o número total de argumentos passados para o script, incluindo o nome do script. Portanto, se você passar três argumentos, $argc terá o valor 4 (um para o nome do script e três para os argumentos).
 
 Exemplo:
@@ -75,7 +75,7 @@ Argumento 3: 15
 <br>
 
 # [ var_dump() ]
-```
+```php
 Serve para mostrar a lista do array
 
 Exemplo:
@@ -100,7 +100,7 @@ php nome-do-arquivo 10 9 8 7 6
 <br>
 
 # [ count() ]
-```
+```php
 A função count() em PHP é utilizada para contar o número de elementos em um array ou o número de propriedades em um objeto.
 
 Exemplo:
@@ -112,7 +112,7 @@ echo $quantidadeDeNotas; // Saída: 3
 <br>
 
 # [ array_sum() ]
-```
+```php
 A função array_sum($notas) é uma função embutida do PHP que calcula a soma de todos os elementos de um array.
 
 Exemplo: 
@@ -124,7 +124,7 @@ echo $somaTotal; // Saída: 24.5
 <br>
 
 # [ fgets(STDIN) ]
-```
+```php
 O *fgets* é uma função em PHP que permite ler uma linha de entrada de um arquivo.
 
 O *STDIN* é uma constante em PHP que representa a entrada padrão do programa, ou seja, o terminal onde o programa está sendo executado. Quando usamos *fgets(STDIN)*, estamos dizendo ao PHP para ler uma linha de entrada diretamente do terminal.
@@ -142,7 +142,7 @@ Ou seja, o que você digitar no terminal será armazenado na variável $nome
 <br>
 
 # [ int, bool, float, string, array, object ]
-```
+```php
 1. int (integer): Esse tipo indica que o parâmetro deve ser um número inteiro. Ou seja, um número sem parte decimal, como 5, 10, -3, etc. Ao especificar *int* antes do parâmetro, você está informando que a função espera receber um valor inteiro naquele parâmetro.
 
 2. bool (boolean): Esse tipo indica que o parâmetro deve ser um valor booleano, ou seja, *true* ou *false*. Ao especificar *bool* antes do parâmetro, você está informando que a função espera receber um valor verdadeiro ou falso naquele parâmetro.
@@ -161,7 +161,7 @@ Ao especificar esses tipos de dados antes dos parâmetros, você está informand
 <br>
 
 # [ void ]
-```
+```php
 O *void* é um tipo especial em PHP que indica que a função não retorna nenhum valor.
 
 Quando uma função é declarada com o tipo de retorno *void*, isso significa que ela não tem um valor de retorno. Ou seja, a função é executada apenas por seus efeitos colaterais, como imprimir algo na tela ou modificar algum estado, mas não devolve nenhum valor ao final da sua execução.
@@ -169,7 +169,7 @@ Quando uma função é declarada com o tipo de retorno *void*, isso significa qu
 <br>
 
 # [ sort() ]
-```
+```php
 A função sort() em PHP é utilizada para ordenar os elementos de um array em ordem crescente.
 
 Exemplo:
@@ -183,7 +183,7 @@ Após a execução do código acima, o array $notas será ordenado como [5, 7, 8
 <br>
 
 # [ rsort() ]
-```
+```php
 A função sort() em PHP é utilizada para ordenar os elementos de um array em ordem descrescente.
 
 Exemplo:
@@ -197,7 +197,7 @@ Após a execução do código acima, o array $notas será ordenado como [9.3, 8.
 <br>
 
 # [ min() ]
-```
+```php
 A função min() em PHP é utilizada para encontrar o menor valor em um array ou entre uma lista de valores.
 
 Exemplo:
@@ -209,7 +209,7 @@ echo $menorNota; // Saída: 5
 <br>
 
 # [strpos() ]
-```
+```php
 A função strpos() é usada para encontrar a posição da primeira ocorrência de um determinado caractere ou substring em uma string.
 
 Sua sintaxe é a seguinte:
@@ -234,7 +234,7 @@ Neste caso, $posicaoDoisPontos receberia o valor 4, pois o caractere : está na 
 <br>
 
 # [ substr() ]
-```
+```php
 A função substr() no PHP é usada para extrair uma substring de uma string.
 
 A função substr() retorna a substring extraída da string original.
@@ -265,7 +265,7 @@ No terceiro exemplo, substr($nome, 6) extrai a substring a partir da posição 6
 <br>
 
 # [ explode() ]
-```
+```php
 A função explode() no PHP é utilizada para dividir uma string em um array, com base em um delimitador especificado. Por exemplo, se você tiver uma string com palavras separadas por vírgulas, pode usar explode() para criar um array onde cada elemento é uma palavra da string original. É muito útil para manipulação de strings e processamento de dados.
 
 Exemplo:
@@ -277,7 +277,7 @@ $arrayFrutas = explode(",", $frutas);
 <br>
 
 # [ json_encode() ]
-```
+```php
 A função json_encode() em PHP é utilizada para converter uma variável PHP, como um array ou um objeto, em uma string no formato JSON (JavaScript Object Notation). Essa função é muito útil quando precisamos exportar dados de uma aplicação PHP para serem utilizados em outras linguagens ou sistemas, especialmente no contexto de aplicações web.
 
 Exemplo:
@@ -300,7 +300,7 @@ echo $jsonFilme;
 <br>
 
 # [ json_decode() ]
-```
+```php
 A função json_decode é uma função do PHP que tem como objetivo converter uma string no formato JSON (JavaScript Object Notation) em uma estrutura de dados do PHP, como um array ou um objeto. Essa função é bastante útil quando você está lidando com dados que vêm de APIs ou de arquivos JSON, permitindo que você manipule esses dados de forma mais fácil em seu código.
 
 Exemplo:
@@ -314,7 +314,7 @@ echo $filme['ano'];  // Saída: 2023
 <br>
 
 # [ file_put_contents() ]
-```
+```php
 A função file_put_contents() é uma função do PHP que permite gravar dados em um arquivo. É uma maneira prática e rápida de criar ou sobrescrever arquivos com conteúdo específico. Essa função é bastante útil quando você precisa salvar informações, como logs, dados de configuração ou qualquer outro tipo de conteúdo gerado dinamicamente.
 
 Exemplo:
@@ -334,7 +334,7 @@ if ($resultado !== false) {
 <br>
 
 # [ header() ]
-```
+```php
 A função header() é uma função do PHP que permite enviar cabeçalhos HTTP para o cliente (navegador). Essa função é fundamental para controlar como o conteúdo é tratado pelo navegador, como redirecionamentos, tipos de conteúdo, cache e muito mais.
 
 Exemplo:
@@ -357,7 +357,7 @@ header('Expires: 0'); // Para expirar imediatamente
 <br>
 
 # [ file_get_contents ]
-```
+```php
 A função `file_get_contents()` em PHP é usada para ler o conteúdo de um arquivo em uma string. É uma maneira simples e eficiente de obter o conteúdo de um arquivo inteiro em uma única operação.
 
 Exemplo:
@@ -379,7 +379,7 @@ if ($conteudo !== false) {
 <br>
 
 # [ readonly ]
-```
+```php
 O conceito de `readonly` foi introduzido na versão **8.1** do PHP e permite definir propriedades de uma classe que podem ser atribuídas apenas uma vez, geralmente no momento da construção do objeto. 
 
 - **Atribuição Única**: Você pode definir o valor da propriedade no construtor da classe, mas não poderá mudá-lo depois.
@@ -401,7 +401,7 @@ $exemplo = new Exemplo("Valor Inicial");
 <br>
 
 # [ class ]
-```
+```php
 Uma classe é um modelo que define a estrutura e o comportamento de um objeto. Ela é um dos pilares da programação orientada a objetos (POO) e permite que você agrupe dados e funções que operam sobre esses dados.
 
 Uma classe pode conter:
@@ -438,7 +438,7 @@ Encapsulamento: Você pode controlar o acesso às propriedades e métodos usando
 <br>
 
 # [ public / private / protected ]
-```
+```php
 Os modificadores de visibilidade public e private em PHP são usados para controlar o acesso às propriedades e métodos de uma classe. Eles são fundamentais para o conceito de encapsulamento na programação orientada a objetos.
 
 Public
@@ -497,7 +497,7 @@ Protected: Acessível para classes e subclasses.
 <br>
 
 # [ __construct ]
-```
+```php
 O método __construct é um método especial em PHP conhecido como construtor. Ele é chamado automaticamente quando uma nova instância de uma classe é criada. O principal objetivo do construtor é inicializar as propriedades do objeto e preparar o estado inicial do mesmo.
 
 Características do __construct
@@ -532,7 +532,7 @@ echo $meuCarro->exibirDetalhes(); // Saída: Modelo: Fusca, Cor: azul
 <br>
 
 # [ enum ]
-```
+```php
 Um enum (abreviação de "enumeration") é um tipo especial de dado que permite definir um conjunto finito de valores possíveis. Em vez de usar strings ou números para representar esses valores, um enum fornece uma maneira mais clara e segura de trabalhar com dados que têm um número limitado de opções.
 
 Por que usar enums?
@@ -563,7 +563,7 @@ $filme = new Filme(
 <br>
 
 # [ match() ]
-```
+```php
 Ela é semelhante à estrutura switch, mas com algumas diferenças importantes. A expressão match é mais concisa, retorna um valor e não requer break para evitar o "fall-through".
 
 Exemplo:
@@ -583,7 +583,7 @@ echo "A nota é: $resultado";
 <br>
 
 # [ extends ]
-```
+```php
 No PHP, a palavra reservada extends é utilizada para criar uma subclasse que herda as propriedades e métodos de uma superclasse (ou classe pai). Isso faz parte do conceito de herança, que é um dos pilares da programação orientada a objetos.
 
 Como funciona a herança?
@@ -630,7 +630,7 @@ Criamos instâncias de Gato e Cachorro e chamamos o método fazerSom(), que reto
 <br>
 
 # [ #[Override] ]
-```
+```php
 O atributo #[Override] é uma anotação que você pode usar em PHP para indicar que um método está sobrescrevendo um método da classe pai. Essa prática é muito útil, pois ajuda a tornar o código mais claro e a evitar erros.
 
 Quando você utiliza #[Override], está sinalizando para quem lê o código (e também para a IDE) que aquele método é uma implementação específica de um método que já existe na classe base. Isso traz algumas vantagens:
@@ -659,7 +659,7 @@ Dessa forma, você garante que a implementação do método duracaoEmMinutos na 
 <br>
 
 # [ abstract ]
-```
+```php
 O termo abstract em PHP é utilizado para definir classes e métodos que são abstratos. Vamos entender cada um deles:
 
 Classe Abstrata
@@ -701,7 +701,7 @@ class Filme extends Titulo
 <br>
 
 # [ interface ]
-```
+```php
 Uma interface no PHP define um conjunto de métodos que uma classe deve obrigatoriamente implementar. Ela não contém implementações dos métodos, apenas suas assinaturas.
 
 A interface é usada para garantir que diferentes classes sigam um mesmo contrato, o que facilita a organização do código e a reutilização de componentes.
@@ -753,7 +753,7 @@ Pode implementar múltiplas?	        ✅ Sim	       ❌ Não
 <br>
 
 # [ implements ]
-```
+```php
 O implements no PHP é usado para indicar que uma classe está implementando uma interface. Isso significa que a classe precisa obrigatoriamente definir os métodos declarados na interface.
 
 Exemplo:
@@ -794,7 +794,7 @@ O que acontece aqui?
 <br>
 
 # [ trait ]
-```
+```php
 No PHP, um "trait" é um mecanismo para reutilização de código em linguagens de herança única, como o PHP. Ele permite agrupar funcionalidades em uma única unidade e reutilizá-las em várias classes, sem a necessidade de herança múltipla.
 
 Exemplo:
@@ -834,7 +834,7 @@ Neste exemplo, o trait Loggable fornece um método log() que pode ser usado pela
 <br>
 
 # [ spl_autoload_register ]
-```
+```php
 No PHP, spl_autoload_register é uma função poderosa que permite registrar várias funções de carregamento automático de classes. Isso significa que, quando você tenta usar uma classe que ainda não foi definida, o PHP chama automaticamente essas funções registradas para tentar carregar o arquivo que contém a definição da classe.
 
 Exemplo:
@@ -860,7 +860,7 @@ Neste exemplo, a função carregarClasse é registrada como uma função de carr
 <br>
 
 # [ str_replace && str_ireplace]
-```
+```php
 No PHP, a função str_replace() é usada para substituir todas as ocorrências de uma substring dentro de uma string por outra substring. É uma ferramenta muito útil para manipular texto e realizar substituições em massa.
 
 <?php
@@ -894,7 +894,7 @@ str_ireplace() é insensível a maiúsculas e minúsculas.
 <br>
 
 # [ require_once ]
-```
+```php
 No PHP, require_once é uma instrução usada para incluir um arquivo PHP dentro de outro script. A principal característica do require_once é que ele garante que o arquivo seja incluído apenas uma vez durante a execução do script.
 
 Como funciona:
@@ -932,7 +932,7 @@ Neste exemplo, o arquivo funcoes.php será incluído apenas uma vez, mesmo que a
 <br>
 
 # [ try...catch ]
-```
+```php
 O try e catch são estruturas fundamentais para o tratamento de exceções em PHP.
 
 O bloco *try* é onde você coloca o código que pode gerar um erro ou uma exceção. A ideia é que você "tenta" executar esse código. Se tudo correr bem, a execução continua normalmente. No entanto, se ocorrer um erro, a execução é interrompida e o controle é passado para o bloco catch.
@@ -949,6 +949,42 @@ try {
 } catch (DivisionByZeroError $erro) {
     return 0; // Retorna 0 se houver divisão por zero
 }
+```
+<br>
+
+# [ tipos catch ]
+```php
+No PHP, existem diferentes tipos de exceções que podem ser capturadas em um bloco catch. Aqui estão os principais tipos:
+
+1. Exception:
+    A classe base para todas as exceções no PHP.
+    Pode ser usada para capturar qualquer tipo de exceção.
+
+2. Error:
+    Representa erros de execução, como divisão por zero, acesso a um índice inválido de um array, etc.
+    Herda da classe Exception, mas é uma classe separada.
+
+3.Throwable:
+    Interface implementada tanto por Exception quanto por Error.
+    Permite capturar tanto exceções quanto erros em um único bloco catch.
+
+Além desses, existem outros tipos de exceções mais específicas que podem ser capturadas:
+
+4. RuntimeException:
+    Representa exceções que ocorrem durante a execução do programa.
+    Herda da classe Exception.
+
+5. LogicException:
+    Representa exceções que ocorrem devido a erros lógicos no código.
+    Herda da classe Exception.
+
+6. InvalidArgumentException:
+    Representa exceções causadas por argumentos inválidos passados para uma função ou método.
+    Herda da classe LogicException.
+
+7. OutOfRangeException:
+    Representa exceções causadas por acessar um índice fora do intervalo de um array ou string.
+    Herda da classe LogicException.
 ```
 <br>
 
