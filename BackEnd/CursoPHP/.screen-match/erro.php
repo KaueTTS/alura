@@ -1,6 +1,7 @@
 <?php
 
 use ScreenMatch\Calc\ConversorNotaEstrela;
+use ScreenMatch\Exception\NotaInvalidaException;
 use ScreenMatch\Model\Episodio;
 use ScreenMatch\Model\Genero;
 use ScreenMatch\Model\Serie;
@@ -23,10 +24,10 @@ $episodio = new Episodio(
 );
 
 try {
-    $episodio->avalia(8);
+    $episodio->avalia(82);
 
     $conversor = new ConversorNotaEstrela();
     echo $conversor->converte($episodio);
-} catch(Exception $e) {
+} catch(NotaInvalidaException $e) {
     echo "Houve um problema: " . $e->getMessage();
 }
