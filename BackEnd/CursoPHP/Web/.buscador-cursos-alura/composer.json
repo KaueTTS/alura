@@ -1,0 +1,17 @@
+{
+    "name": "kauetts/buscador-cursos",
+    "description": "Projeto que buscar os cursos do site Alura",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Kauetts\\BuscadorCursos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kauê Bertaze",
+            "email": "69527468+KaueTTS@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
