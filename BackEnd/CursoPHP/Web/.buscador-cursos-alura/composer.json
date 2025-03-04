@@ -13,5 +13,8 @@
             "email": "69527468+KaueTTS@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "^7.9",
+        "symfony/dom-crawler": "^7.2"
+    }
 }
