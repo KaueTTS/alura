@@ -64,4 +64,28 @@ Nesta aula, aprendemos sobre como gerenciar dependências em um projeto PHP util
    - Falamos sobre a intenção de organizar o código em classes específicas para facilitar a manutenção e a reutilização futura.
 <br>
 
+# [ Aula 4 ]
+## Resumo da Aula: Extraindo classe
+
+Nesta aula, aprendemos a gerenciar dependências e a extrair uma classe para facilitar a organização do nosso código. Focamos na criação de um componente chamado `Buscador`, que utiliza bibliotecas externas para realizar requisições HTTP e manipular o DOM.
+
+Iniciamos criando a classe `Buscador` no namespace `Alura\BuscadorDeCursos`, que possui um construtor recebendo um cliente HTTP (`$httpClient`) e um `Crawler`. Em seguida, implementamos o método `buscar()`, que faz uma requisição a uma URL específica e retorna um array com os nomes dos cursos disponíveis na página.
+
+Utilizamos o GuzzleHttp para facilitar as requisições e o Crawler para filtrar os elementos desejados do HTML. Ao final, iteramos sobre os cursos retornados e os exibimos.
+
+Por fim, discutimos a necessidade de incluir um `require` para a classe `Buscador`, pois o Composer não gerencia automaticamente as classes criadas por nós. Essa aula nos mostrou como integrar dependências externas e estruturar nosso código de forma mais eficiente.
+<br>
+
 # O QUE APRENDEMOS
+
+- O composer possui um repositório central de pacotes: https://packagist.org/
+- É possível configurar repositórios de outras fontes (do github, zip etc)
+- O pacotes guzzlehttp/guzzle serve para executar requisições HTTP de alto nível
+- Para instalar uma dependência (pacote) basta executar: composer require <nome do pacote>
+- Composer guarda as dependências e dependências transitivas na pasta vendor do projeto
+- O nome e versão da dependências fica salvo no arquivo composer.json
+- O comando require adiciona automaticamente a dependência no composer.json
+- O comando composer install automaticamente baixa todas as dependências do composer.lock (ou do composer.json, caso o .lock não exista ainda)
+- O arquivo composer.lock define todas as versões exatas instaladas
+- O composer já gera um arquivo autoload.php para facilitar o carregamento das dependências
+- Basta usar require vendor/autoload.php
