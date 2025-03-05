@@ -31,15 +31,15 @@ class ComposerStaticInit5d7ef1b0b5e0bcf515f00e4f5a1f5d6f
         array (
             'Masterminds\\' => 12,
         ),
-        'K' => 
-        array (
-            'Kauetts\\BuscadorCursos\\' => 23,
-        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+        ),
+        'A' => 
+        array (
+            'Alura\\BuscadorDeCursos\\' => 23,
         ),
     );
 
@@ -73,10 +73,6 @@ class ComposerStaticInit5d7ef1b0b5e0bcf515f00e4f5a1f5d6f
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'Kauetts\\BuscadorCursos\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -88,6 +84,10 @@ class ComposerStaticInit5d7ef1b0b5e0bcf515f00e4f5a1f5d6f
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Alura\\BuscadorDeCursos\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
