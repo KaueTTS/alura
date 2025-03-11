@@ -24,4 +24,37 @@ Após configurar o autoload, podemos remover a instrução `require` que importa
 Por fim, a aula também menciona que, em algumas situações, podemos ter arquivos com funções auxiliares que não utilizam orientação a objetos, e que discutiremos como incluí-los no autoload na próxima aula.
 <br>
 
+# [ Aula 3 ]
+## Resumo da Aula: Classmap e Files
+
+Nesta aula, aprendemos sobre o autoload no Composer, focando em duas abordagens: **Classmap** e **Files**.
+
+### 1. Classmap
+- O Classmap é uma forma de mapear classes para arquivos específicos.
+- É útil quando trabalhamos com códigos legados ou projetos que não segue a PSR-4.
+- Ao definir um classmap `composer.json`, podemos informar ao Composer onde encontrar as classes.
+- Exemplo: se temos uma classe `Teste`, podemos mapeá-la para o arquivo `Teste.php`.
+- Após rodar o comando `composer dumpautoload`, o Composer gera um arquivo que associa a classe ao seu caminho.
+
+### 2. Files
+- Essa abordagem permite incluir arquivos que contêm funções, mesmo que não estejam dentro de uma classe.
+- Ao adicionar um arquivo na seção `files` do `composer.json`, garantimos que ele será carregado sempre que o autoload for chamado.
+- Isso é útil para funções auxiliares que não estão encapsuladas em classes.
+
+### Considerações Finais
+- A aula também abordou a importância de renomear métodos para evitar conflitos.
+- O Composer facilita a inclusão de classes e funções sem a necessidade de `require` individualmente.
+- Por fim, foi mencionado que o Composer possui ferramentas na linha de comando que podem ser utilizadas para gerenciar dependências e executar testes.
+<br>
+
 # O QUE APRENDEMOS
+
+- Conhecemos a PSR-4 (Autoloader)
+- A PSR-4 define um padrão para o carregamento automático de classes
+- O namespace da classe tem partes:
+    - O vendor namespace (ou namespace padrão ou namespace prefixo)
+        - O vendor namespace fica mapeado para uma pasta do projeto dentro do arquivo composer.json
+    - Podemos ter um sub-namespace que precisa ser representado através de pastas
+- Para atualizar o arquivo autoload.php baseado no composer.json, podemos rodar o comando composer dumpautoload
+- Para classes que não seguem o PSR-4, podemos definir um classmap dentro do composer.json
+- Para carregar um biblioteca de funções automaticamente, podemos adicionar uma entrada files no composer.json
